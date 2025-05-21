@@ -11,15 +11,49 @@
         text-align: center; 
     }
 .box {
-    width: 500px;
+    width: 300px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     background-color: turquoise;
-    margin: 10px;
     border-radius: 3px;
     font-size: 12px;
     text-align: center;
     box-shadow: 4px 4px 4px black;
     padding: 12px;
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    background: aquamarine
+}
+
+.leftmenu {
+    width: 20%;
+    height: 400px;
+    float: left;
+    background: lightblue;
+    
+}
+
+.content {
+    width: 80%;
+    height: 400px;
+    float: right;
+    background: lightyellow;
+    
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+    background: greenyellow;
+    clear: both;
 }
