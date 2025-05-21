@@ -1,6 +1,6 @@
 .mainIMG
     {
-        height: 200px; 
+        width : 200px; 
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -8,6 +8,18 @@
 .Title
     {
         font-family: Arial, Helvetica, sans-serif; 
-        font-size: 17px; 
         text-align: center; 
     }
+.box {
+    width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: turquoise;
+    margin: 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    text-align: center;
+    box-shadow: 4px 4px 4px black;
+    padding: 12px;
+}
