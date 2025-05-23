@@ -1,0 +1,39 @@
+.profile {
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title {
+    text-align: center;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p {
+    /* 모든p태그에 적용됩니다. */
+    text-align: center;
+    font-size: 15;
+}
+#special {
+    text-align: center;
+    color: gray;
+    font-size: 15;
+    line-height: 1.6;
+}
+.box {
+    width: 700px;
+    height: auto;
+    background-color: rgb(248, 182, 94);
+    /* display: block; div는 display block속성을 가지고 있음 */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    border: 2px solid black;
+    border-radius: 15px;
+    box-shadow: 10px 10px gray;
+}
+
+/* css selector
+.profile profile #profile
+class selector, tag selector, idselector
+적용되는 순서는 style > id > class > tag */

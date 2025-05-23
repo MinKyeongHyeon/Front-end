@@ -53,6 +53,7 @@
     height: 100px;
     background: greenyellow;
     clear: both;
+    float: none;
 }
 .text {
     font-family: Arial, Helvetica, sans-serif;
