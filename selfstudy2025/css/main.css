@@ -37,6 +37,13 @@ p {
 
 .container {
     width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    overflow: hidden;
 }
 
 .header {
@@ -85,3 +92,5 @@ class selector, tag selector, idselector
 적용되는 순서는 style > id > class > tag */
 
 /* 어떤 style 속성들은 inherit을 지원함(부모로부터 영향을 받음) */
+/* 
+clear both는 자식요소의 float을 반영하지 않음. 부모요소의 여백이 0이 됨, 따라서 부모요소에 float을 적용하고 싶을때는 ovevflow hidden속성으로 부모안 자식을 모두 포함해서 높이를 계산하도록 바꾸어 줘야함. */
