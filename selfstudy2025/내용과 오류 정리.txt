@@ -1,0 +1,7 @@
+div = nav = footer = section
+같은 성질의 요소이지만 구분을 위해 따로 사용
+
+css selector
+.profile profile #profile
+class selector, tag selector, idselector
+적용되는 순서는 style > id > class > tag

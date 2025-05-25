@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+}
+div,
+input,
+textarea {
+    box-sizing: border-box;
+}
+.background {
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+}
+.main {
+    margin: auto;
+    width: 600px;
+    background-color: white;
+}
+input[type="email"] {
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    display: block;
+    box-sizing: border-box;
+}
+input[type="text"] {
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    display: block;
+    box-sizing: border-box;
+}
+.box {
+    box-sizing: border-box;
+    margin: auto;
+    background-color: white;
+}
+.first-name {
+    width: 47%;
+    float: left;
+}
+.last-name {
+    width: 47%;
+    float: right;
+    margin: 0;
+}
+.message {
+    margin-top: 30px;
+    clear: both;
+}
+input[type="textarea"] {
+    width: 100%;
+    height: 200px;
+}
+.check {
+    display: inline;
+}
+.yellow-button {
+    padding: 10px;
+    width: 100px;
+    display: block;
+    margin: auto;
+    background-color: yellow;
+    float: right;
+}
+.w-100 {
+    width: 100%;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 3;
+    display: block;
+    margin: auto;
+}
