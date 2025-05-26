@@ -56,3 +56,17 @@ img {
     text-align: left;
     width: 33%;
 }
+.paybutton {
+    float: right;
+    padding: 10px;
+    background-color: coral;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.paybutton:hover {
+    background-color: chocolate;
+}
+.paybutton:active {
+    background-color: brown;
+}
