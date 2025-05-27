@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            .sr-only {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip-path: inset(50%);
+                border: 0;
+                clip: rect(0 0 0 0);
+            }
+        </style>
+        <title>winiv login</title>
+    </head>
+    <body style="margin: 0">
+        <h1 class="sr-only">login page</h1>
+        <div
+            style="
+                display: block;
+                width: 80%;
+                max-width: 800px;
+                height: 250px;
+                border: 1px solid rgb(177, 175, 175);
+                border-radius: 10px;
+                margin-top: 50px;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 30px;
+            "
+        >
+            <div
+                style="
+                    width: 100%;
+                    height: 30%;
+                    display: flex;
+                    margin-bottom: 10px;
+                "
+            >
+                <h2 style="font-weight: 500; font-size: 25px">
+                    더 편리해진 위니브에 오신 것을 환영합니다.
+                </h2>
+            </div>
+            <a
+                style="
+                    background-color: rgb(94, 43, 248);
+                    width: 100%;
+                    height: 30%;
+                    border-radius: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 10px;
+                "
+            >
+                <img
+                    src="./src/weniv-logo.png"
+                    alt="weniv"
+                    style="width: 150px"
+                />
+                <p style="color: white; font-size: 30px">로그인</p>
+            </a>
+            <div style="width: 100%; height: 20%">
+                <div style="display: flex; align-items: center; float: left">
+                    <img
+                        style="width: 40px"
+                        src="./src/icon-lock.png"
+                        alt="lockicon"
+                    />
+                    <a
+                        href="#"
+                        style="
+                            color: gray;
+                            font-size: 30px;
+                            text-decoration: none;
+                        "
+                    >
+                        아이디 | 비밀번호 찾기
+                    </a>
+                </div>
+                <div style="display: flex; align-items: center; float: right">
+                    <img
+                        style="width: 40px"
+                        src="./src/icon-user.png"
+                        alt="usericon"
+                    />
+                    <a
+                        href="#"
+                        style="
+                            color: gray;
+                            font-size: 30px;
+                            text-decoration: none;
+                        "
+                        >회원가입</a
+                    >
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
