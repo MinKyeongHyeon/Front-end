@@ -14,7 +14,7 @@
                 border-radius: 5px;
                 display: none;
             }
-            .close-btn{
+            .close-btn {
                 background-color: white;
                 padding: 20px;
                 color: black;
@@ -32,13 +32,22 @@
             document.getElementById("hi").style.fontSize = "16px";
         </script>
 
-        <div class="alert-box" id="alert">경고창임~
-            <button class="close-btn"  onclick="getElementById('alert').style.display='none'">
+        <div class="alert-box" id="alert">
+            경고창임~
+            <button classBtn="close-btn" onclick="closeBtn()">
                 닫기 버튼임~
             </button>
         </div>
-        <button onclick="getElementById('alert').style.display = 'block'">버튼임~</button>
-            버튼
-        </button>
+
+        <button onclick="alertBtn()">버튼임~</button>
+
+        <script>
+            function closeBtn() {
+                document.getElementById("alert").style.display = "none";
+            }
+            function alertBtn() {
+                document.getElementById("alert").style.display = "block";
+            }
+        </script>
     </body>
 </html>
