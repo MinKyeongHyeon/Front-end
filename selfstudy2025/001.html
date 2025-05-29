@@ -34,19 +34,23 @@
 
         <div class="alert-box" id="alert">
             경고창임~
-            <button classBtn="close-btn" onclick="closeBtn()">
+            <button classBtn="close-btn" onclick="btnCtrl('none')">
                 닫기 버튼임~
             </button>
         </div>
 
-        <button onclick="alertBtn()">버튼임~</button>
+        <button onclick="btnCtrl('block')">버튼임~</button>
 
         <script>
-            function closeBtn() {
-                document.getElementById("alert").style.display = "none";
-            }
-            function alertBtn() {
-                document.getElementById("alert").style.display = "block";
+            // function closeBtn() {
+            //     document.getElementById("alert").style.display = "none";
+            // }
+            // function alertBtn() {
+            //     document.getElementById("alert").style.display = "block";
+            // }
+
+            function btnCtrl(hole) {
+                document.getElementById("alert").style.display = "hole";
             }
         </script>
     </body>
