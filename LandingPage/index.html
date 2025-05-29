@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>landingpage</title>
+        <style>
+            body {
+                margin: 0px;
+            }
+            .gray-button {
+                color: white;
+                background-color: gray;
+                width: 12vw;
+                text-decoration: none;
+                padding: 10px;
+                border-radius: 5px;
+            }
+            .gray-button:hover {
+                background-color: white;
+                color: black;
+                transition: all 0.5s;
+            }
+            header {
+                width: 100vw;
+                margin-bottom: 0px;
+                padding: 0%;
+                height: 800px;
+                background: blue;
+                display: flex;
+                flex-direction: row;
+            }
+            .header-container {
+                width: 70vw;
+                display: block;
+                margin: auto;
+                margin-bottom: 0px;
+            }
+            .header-left {
+                width: 50vw;
+                max-width: 600px;
+                text-align: left;
+                display: block;
+            }
+            header img {
+                width: 20vw;
+                min-width: 200px;
+                display: block;
+                float: right;
+            }
+            @media screen and (max-width: 1200px) {
+                .header-left {
+                    width: 50vw;
+                }
+                .header-container img {
+                    float: none;
+                    margin: auto;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                .header-left {
+                    width: 100vw;
+                    margin: auto;
+                    float: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="header-container">
+                <div class="header-left">
+                    <h1>Landing Page for Apps</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Eveniet nulla neque culpa natus facilis quos commodi
+                        ullam provident possimus et non aperiam vero
+                        voluptatibus labore, ex aut laudantium esse magni?
+                    </p>
+                    <a class="gray-button" href="#">Show more</a>
+                </div>
+                <img src="./image/iphone-1.png" alt="iphone" />
+            </div>
+        </header>
+        <section>
+            <h2>services</h2>
+            <h3>What We Offer</h3>
+            <p>Responsive</p>
+            <p>lorem ipsum i love cording</p>
+            <p>Experiments</p>
+            <p>lorem ipsum i love cording</p>
+            <p>Quikness</p>
+            <p>lorem ipsum i love cording</p>
+            <p>Global Shipping</p>
+            <p>lorem ipsum i love cording</p>
+        </section>
+        <section>
+            <h2>Portfolio</h2>
+            <h3>What we can DO</h3>
+        </section>
+    </body>
+</html>

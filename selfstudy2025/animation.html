@@ -17,7 +17,7 @@
             }
 
             .shop-item {
-                width: 33%%;
+                width: 33%;
                 padding: 10px;
             }
             .shop-item img {
@@ -32,8 +32,24 @@
 
                 transition: all 1s;
             }
-            .overlay:hover {
-                height: 90%;
+
+            .overlay-wrap {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+
+                overflow: hidden;
+            }
+
+            .overlay-black {
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                margin-top: 100%;
+                transition: all 1s;
+            }
+            .overlay-wrap:hover .overlay-black {
+                margin-top: 30%;
             }
         </style>
     </head>
@@ -42,12 +58,19 @@
             <div class="shop-container">
                 <div class="shop-item">
                     <div style="position: relative">
-                        <div class="overlay"></div>
+                        <div class="overlay-wrap">
+                            <div class="overlay-black"></div>
+                        </div>
                         <img src="./Image/product1-1.jpg" alt="" />
                     </div>
                 </div>
                 <div class="shop-item">
-                    <img src="./Image/product2-1.jpg" alt="" />
+                    <div style="position: relative">
+                        <div class="overlay-wrap">
+                            <div class="overlay-black"></div>
+                        </div>
+                        <img src="./Image/product2-1.jpg" alt="" />
+                    </div>
                 </div>
                 <div class="shop-item">
                     <img src="./Image/product3-1.jpg" alt="" />
