@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>document</title>
+    </head>
+    <body>
+        <!-- <video
+            src="./src/rabbit.MOV"
+            width="300px"
+            controls
+            autoplay
+            loop
+        ></video> -->
+        <!-- poster. 브라우저, 인터넷 문제로 동영상을 재생할 수 없을 경우 -->
+        <video
+            src="./src/rabbit.MOV"
+            width="300px"
+            controls
+            poster="./src/rosy-icon.png"
+        ></video>
+        <video width="300px" controls src="./src/rabbit.MOV">
+            <source src="./src/rabbit.MOV" type="video/mov" />
+        </video>
+
+        <audio src="./src/CatPurr.mp3" controls></audio>
+        <audio controls>
+            <source src="./src/CatPurr.mp3" type="audio/mpeg" />
+        </audio>
+    </body>
+</html>

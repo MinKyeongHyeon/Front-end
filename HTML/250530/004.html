@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- 0~100 사이의 범위에서 70의 값  -->
+        <p>
+            Disk Usage
+            <meter id="usage" value="100" min="0" max="100">70%</meter>
+        </p>
+        <button onclick="metervalue(20)">디스크정리</button>
+        <p>
+            Battery
+            <meter id="bettery" value="0.1" low="0.2" high="0.6" optimum="0.8">
+                20%
+            </meter>
+        </p>
+        <button onclick="batteryValue(0.9)">충전하기</button>
+
+        <script>
+            function metervalue(diskusage) {
+                document.getElementById("usage").value = diskusage;
+            }
+            function batteryValue(Battery) {
+                document.getElementById("bettery").value = Battery;
+            }
+        </script>
+        <label for="file">파일 업로드 진행상황</label>
+        <progress id="file" value="50" max="100">50%</progress>
+        <p>데이터 로드 중 .. <progress></progress></p>
+        <h2>작업 진행 상황</h2>
+        <progress id="progressBar" value="0" max="100"></progress>
+        <p id="progressText">0%</p>
+        <button onclick="incrementProgress()">진행</button>
+
+        <button id="showDialogBtn">모달 열기</button>
+        <dialog id="myDialog">
+            <p>만나서 반가워요 여러분!</p>
+            <button id="closeBtn">모달 닫기</button>
+        </dialog>
+
+        <script>
+            function incrementProgress() {
+                var progressBar = document.getElementById("progressBar");
+                var progressText = document.getElementById("progressText");
+
+                if (progressBar.value < 100) {
+                    progressBar.value += 10;
+                    progressText.textContent = progressBar.value + "%";
+                }
+
+                if (progressBar.value >= 100) {
+                    alert("완료!");
+                }
+            }
+            const dialog = document.getElementById("myDialog");
+            const showDialogBtn = document.getElementById("showDialogBtn");
+            const closeBtn = document.getElementById("closeBtn");
+
+            showDialogBtn.addEventListener("click", () => {
+                dialog.showModal();
+                console.log("FE 짱짱");
+            });
+
+            closeBtn.addEventListener("click", () => {
+                dialog.close();
+            });
+        </script>
+    </body>
+</html>
