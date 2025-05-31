@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form 만들어보기</title>
+    <style>
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+      #OauthField {
+        & > div {
+          /* display: flex; */
+          border: 1px solid #000;
+          border-radius: 4px;
+          margin-bottom: 14px;
+          text-align: center;
+          padding: 5px;
+
+          & > a {
+            /* display: flex;
+            flex-direction: row;
+            gap: 4rem; */
+            /* padding: 0.2rem 0.4rem; */
+            line-height: 28px;
+            & > img {
+              float: left;
+            }
+          }
+        }
+      }
+    </style>
+  </head>
+  <!-- 인풋 보더컬러 #c5c5c5 -->
+  <!-- 로그인상태 유지 텍스트 컬러 #767676 -->
+  <!-- 로그인버튼 컬러 #3083e9 -->
+  <!-- 구글 로그인 보더컬러 #787878 -->
+  <!-- 페북 로그인 보더컬러 #329fd8 -->
+  <!-- 네버 로그인 보더컬러 #1bbf34 -->
+  <!-- 카톡 로그인 보더컬러 #f2c75a -->
+  <!-- 버튼 크기는 최소 44 x 44 px 권장-->
+  <body>
+    <!-- TODO: dialog로 감싸기 -->
+    <div>
+      <div style="border-bottom: 1px solid #c5c5c5; display: flex">
+        <h1>로그인 또는 회원가입</h1>
+        <button>X</button>
+      </div>
+      <form action="">
+        <p>위니브에서 여러분의 궁금증을 해결하세요! :)</p>
+        <div>
+          <input type="text" name="id" id="id" placeholder="아이디" required />
+        </div>
+        <div>
+          <input
+            style="width: 100%"
+            type="password"
+            name="password"
+            id="password"
+            placeholder="비밀번호"
+            required
+          />
+        </div>
+        <div>
+          <img src="../src/task/img/check-box.png" alt="" srcset="" />
+          <input
+            type="checkbox"
+            name="saveLogin"
+            id="saveLogin"
+            style="display: none"
+          />
+          <label for="saveLogin" style="cursor: pointer">로그인상태 유지</label>
+        </div>
+        <div>
+          <button style="width: 100%; background-color: #3083e9" type="submit">
+            로그인
+          </button>
+        </div>
+      </form>
+      <!-- form end -->
+      <div>
+        <a href="#">회원가입</a>
+        <span aria-hidden="true">&nbsp;|&nbsp;</span>
+        <a href="#">아이디/비밀번호 찾기</a>
+      </div>
+      <fieldset
+        id="OauthField"
+        style="text-align: center; border: none; border-top: 1px solid #c5c5c5"
+      >
+        <legend>또는</legend>
+        <div style="border-color: #787878">
+          <a href="">
+            <img src="../src/task/img/Google__G__Logo 1.png" alt="" />구글
+            계정으로 로그인
+          </a>
+        </div>
+        <div style="border-color: #329fd8">
+          <a href="">
+            <img src="../src/task/img/facebook.png" alt="" />페이스북 계정으로
+            로그인
+          </a>
+        </div>
+        <div style="border-color: #1bbf34">
+          <a href="">
+            <img src="../src/task/img/naver-logo.png" alt="" />네이버 계정으로
+            로그인
+          </a>
+        </div>
+        <div style="border-color: #f2c75a">
+          <a href="">
+            <img src="../src/task/img/message-circle.png" alt="" />카카오톡
+            계정으로 로그인
+          </a>
+        </div>
+      </fieldset>
+    </div>
+    <script></script>
+  </body>
+</html>
