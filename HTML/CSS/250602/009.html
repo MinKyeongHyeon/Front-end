@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            p::before {
+                content: "오르미 6기 여러분 ";
+                color: coral;
+                font-size: 24px;
+            }
+            /* 아래 빈 요소들은 가상요소 적용 불가/ */
+            img::before,
+            br::before {
+                content: "가상 요소추가";
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            <strong> 안녕하세요! </strong>
+        </p>
+        <img src="../../../LandingPage/image/iphone-1.pngß" alt="" />
+        <br />
+        <input type="ß" />
+    </body>
+</html>

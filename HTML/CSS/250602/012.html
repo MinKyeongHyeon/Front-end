@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            /* :is(h1, h2, h3, h4)a {
+                color: blue;
+            } */
+            :where(h1, h2, h3, h4)a {
+                color: blue;
+            }
+            div:has(a) {
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <h1><a href="">hello</a></h1>
+        <h2><a href="">hello</a></h2>
+        <h3><a href="">hello</a></h3>
+        <h4><a href="">hello</a></h4>
+        <div>
+            <p>lorem</p>
+        </div>
+        <div>
+            <a href="#">click me</a>
+        </div>
+    </body>
+</html>

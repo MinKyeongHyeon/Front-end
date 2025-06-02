@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            /* 타입의 관계없이 자손의 순서 선택 */
+            div :nth-child(1) {
+                color: red;
+            }
+            div :nth-child(2n) {
+                background-color: aquamarine;
+            }
+            div :nth-child(2n + 1) {
+                background-color: cornflowerblue;
+            }
+            div p :nth-child(3) {
+                background-color: crimson;
+            }
+            /* 형제 요소 중 동일한 타입 요소 위치 기반으로 선택 */
+            div p:nth-of-type(3) {
+                background-color: cadetblue;
+            }
+            div :only-of-type {
+                color: blueviolet;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>첫 번째 문단</p>
+            <h2>첫 번째 제목</h2>
+            <p>두 번째 문단</p>
+            <p>세 번째 문단</p>
+            <span
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit.</span
+            >
+        </div>
+    </body>
+</html>
