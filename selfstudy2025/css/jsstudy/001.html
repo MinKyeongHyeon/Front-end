@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title><button></button></title>
+        <style>
+            .alert-box {
+                display: block;
+                width: 400px;
+                height: 300px;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="alert-box" id="alert">
+            <p>알림창임</p>
+        </div>
+        <button onclick="btnctrl('아이디입력')">열기</button
+        ><button onclick="btnctrl('비밀번호입력')">닫기</button>
+
+        <script>
+            function btnctrl(hole) {
+                // document.getElementById("alert").style.display = hole;
+                document.getElementById("alert").querySelector("p").innerHTML =
+                    hole;
+            }
+        </script>
+    </body>
+</html>

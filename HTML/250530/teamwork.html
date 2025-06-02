@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            div {
+                display: flex;
+                flex-direction: column;
+                margin-top: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="">
+            <div>
+                <label for="id">아이디</label>
+                <input required type="text" id="id" name="id" />
+            </div>
+            <div>
+                <label for="pw">비밀번호</label>
+                <input
+                    required
+                    type="password"
+                    id="pw"
+                    name="password"
+                    placeholder="특수문자 포함 필수"
+                />
+            </div>
+
+            <div>
+                <!-- 사용자 엔터페이스에 항목을 나타내기 위해 사용 -->
+                <label for="birth">생일</label>
+                <!-- 날짜 입력 창 -->
+                <input required type="date" name="birthDay" id="birth" />
+            </div>
+
+            <div>
+                <!-- <h2 style="font-size: 1rem">프로필사진</h2> -->
+                <!-- <label for="profile" class="">프로필 이미지를 업로드하세요</label> -->
+                <label for="profile" class="">프로필</label>
+                <input
+                    type="file"
+                    id="profile"
+                    name="profile"
+                    accept="image/png, image/jpeg"
+                />
+            </div>
+            <div>
+                <!-- 통신사 -->
+                <select name="mobileCarrier" id="mobileCarrier" required>
+                    <optgroup label="통신사">
+                        <option value="SKT" selected>SKT</option>
+                        <option value="알뜰폰">알뜰폰</option>
+                    </optgroup>
+                    <optgroup label="통신사">
+                        <option value="KT">KT</option>
+                        <option value="알뜰폰">알뜰폰</option>
+                    </optgroup>
+                    <optgroup label="통신사">
+                        <option value="LGU+">LGU+</option>
+                        <option value="알뜰폰">알뜰폰</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div>
+                <!-- 연락처 -->
+                <label for="contact">연락처</label>
+                <input
+                    required
+                    type="tel"
+                    id="contact"
+                    name="contact"
+                    placeholder="-을 제외하고 써주세요."
+                />
+            </div>
+
+            <div>
+                <!-- 성별 -->
+                <!-- 선택 항목들을 그룹화 하기위해 사용 -->
+                <fieldset>
+                    <!-- 그룹의 제목 설정 -->
+                    <legend>성별</legend>
+                    <!-- "남성"이라는 항목 나타내기 위해 사용 -->
+                    <!-- 여러 항목 중 하나만 선택가능 한 radio타입 설정, name 속성에 같은 값을 줘서 동일한 그룹을 나타냄, 고유한 아이디 설정과 서버에 보내는 값을 value로 설정-->
+                    <label for="male">남성</label>
+                    <input
+                        required
+                        type="radio"
+                        name="gender"
+                        id="male"
+                        value="male"
+                    />
+                    <!-- "여성"이라는 항목 나타내기 위해 사용 -->
+                    <label for="female">여성</label>
+                    <input
+                        required
+                        type="radio"
+                        name="gender"
+                        id="female"
+                        value="female"
+                    />
+                    <label for="cat">고양이</label>
+                    <input
+                        required
+                        type="radio"
+                        name="gender"
+                        id="cat"
+                        value="cat"
+                    />
+                </fieldset>
+            </div>
+            <!-- 
+      http://127.0.0.1:3000/HTML/250530/task/realTeamCode.html?id=2414124&password=214124&birthDay=0023-12-12&profile=&mobileCarrier=SKT&contact=313123&gender=cat&
+      
+      
+      html=on&js=on& << here
+      
+      
+      browser=엣지
+       -->
+            <!-- http://127.0.0.1:3000/HTML/250530/task/realTeamCode.html?id=12414&password=12414&birthDay=0012-02-21&profile=&mobileCarrier=알뜰폰&contact=3123123&gender=cat&
+       
+
+      테크노롤지아=html&테크노롤지아=css&테크노롤지아=js& << here
+      
+      browser=파이어폭스 -->
+
+            <!-- 
+      http://127.0.0.1:3000/HTML/250530/task/realTeamCode.html?id=21414&password=142412414&birthDay=21414-04-14&profile=&mobileCarrier=SKT&contact=14124124&gender=cat&
+      
+      techStack=html
+      &techStack=css
+      &techStack=js
+      
+      &browser=파이어폭스
+       -->
+
+            <!-- http://127.0.0.1:3000/HTML/250530/task/realTeamCode.html?id=4124124&password=124124124&birthDay=2025-05-07&profile=&mobileCarrier=SKT&contact=4124124&gender=cat&browser=파이어폭스 -->
+
+            <div
+                style="
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 0.5rem;
+                "
+            >
+                <!-- 사용 기술 -->
+                <!-- 보내야 할 데이터에 대한 정보를 name에 저장한다 -->
+                <fieldset>
+                    <legend>사용 기술</legend>
+                    <label for="html">HTML</label>
+                    <input
+                        type="checkbox"
+                        value="html"
+                        name="techStack"
+                        id="html"
+                    />
+                    <label for="css">CSS</label>
+                    <input
+                        type="checkbox"
+                        value="css"
+                        name="techStack"
+                        id="css"
+                    />
+                    <label for="js">JavaScript</label>
+                    <input
+                        type="checkbox"
+                        value="js"
+                        name="techStack"
+                        id="js"
+                    />
+                    <label for="python">Python</label>
+                    <input
+                        type="checkbox"
+                        value="python"
+                        name="techStack"
+                        id="python"
+                    />
+                    <label for="django">Django</label>
+                    <input
+                        type="checkbox"
+                        value="django"
+                        name="techStack"
+                        id="django"
+                    />
+                </fieldset>
+            </div>
+
+            <div>
+                <!-- 브라우저 -->
+                <label for="browser">사용하는 브라우저를 선택하세요.</label>
+                <!-- input -->
+                <input
+                    required
+                    list="browsers"
+                    id="browser"
+                    name="browser"
+                    placeholder="선택해주세요."
+                />
+
+                <!-- 값 넣는 곳 -->
+                <datalist id="browsers">
+                    <option value="">선택해주세요.</option>
+                    <option value="크롬"></option>
+                    <option value="엣지"></option>
+                    <option value="파이어폭스"></option>
+                    <option value="사파리"></option>
+                </datalist>
+            </div>
+
+            <div
+                style="
+                    display: flex;
+                    flex-direction: row;
+                    gap: 0.5rem;
+                    margin-top: 0.5rem;
+                "
+            >
+                <button
+                    type="reset"
+                    style="
+                        border: none;
+                        background-color: #f44335;
+                        color: #fff;
+                        border-radius: 4px;
+                        padding: 0.5rem 1rem;
+                        cursor: pointer;
+                    "
+                >
+                    초기화
+                </button>
+                <button
+                    type="submit"
+                    style="
+                        border: none;
+                        background-color: #4daf52;
+                        color: #fff;
+                        border-radius: 4px;
+                        padding: 0.5rem 1rem;
+                        cursor: pointer;
+                    "
+                >
+                    제출
+                </button>
+            </div>
+        </form>
+    </body>
+</html>
