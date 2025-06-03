@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>합격테스트</title>
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <input type="text" id="score1" />
+        <input type="text" id="score2" />
+        <button id="check">확인하기</button>
+
+        <script>
+            $("#check").on("click", function () {
+                if (
+                    $("#score1").val() > 100 ||
+                    $("#score1").val() < 0 ||
+                    $("#score2").val() > 100 ||
+                    $("#score2").val() < 0
+                ) {
+                    alert("장난치지 마셈.");
+                    return;
+                }
+                if ($("#score1").val() < 40 || $("#score2").val() < 40) {
+                    alert("점수 미달 불합격");
+                } else if (
+                    Number($("#score1").val()) + Number($("#score2").val()) <
+                    120
+                ) {
+                    alert("총합 미달 불합격");
+                } else {
+                    alert("합격🎉");
+                }
+            });
+        </script>
+    </body>
+</html>
