@@ -36,14 +36,43 @@
     </head>
     <body>
         <div class="black-bg">
+            <button id="btn">버튼</button>
             <div class="white-bg">
                 <h4>로그인하세요</h4>
-                <button class="btn btn-danger" id="close">닫기</button>
+                <form action="success.html">
+                    <div class="my-3">
+                        <input type="text" class="form-control" />
+                    </div>
+                    <div class="my-3">
+                        <input id="pw" type="password" class="form-control" />
+                    </div>
+                    <button type="submit" class="btn btn-primary">전송</button>
+                    <button type="button" class="btn btn-danger" id="close">
+                        닫기
+                    </button>
+                </form>
             </div>
-            <button id="btn">버튼</button>
         </div>
 
         <script>
+            $(".btn-primary").on("click", function (e) {
+                if ($(".form-control").val() == "") {
+                    alert("빈칸 없이 입력하셈~");
+                    e.preventDefault();
+                    console.log("첫 번째 preventDefault 실행");
+                }
+
+                if ($("#pw").val() == "") {
+                    alert("비밀번호도 빼먹지 말고 입력하셈~");
+                    e.preventDefault();
+                    console.log("두 번재 preventDefault");
+                } else if ($("#pw").val().length < 6) {
+                    alert("비밀번호는 6자 이상으로 하셈~");
+                    e.preventDefault();
+                    console.log("세 번째 preventDefault");
+                }
+            });
+
             $("#btn").on("click", function () {
                 $(".white-bg").addClass("show-modal");
             });
