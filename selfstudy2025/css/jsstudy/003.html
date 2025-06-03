@@ -19,6 +19,13 @@
                 border-radius: 5px;
                 padding: 30px;
                 display: block;
+                visibility: hidden;
+                opacity: 0;
+                transition: all 1s;
+            }
+            .show-modal {
+                visibility: visible;
+                opacity: 1;
             }
         </style>
         <script
@@ -37,11 +44,11 @@
         </div>
 
         <script>
-            $("#close").on("click", function () {
-                $(".white-bg").css("display", "none");
-            });
             $("#btn").on("click", function () {
-                $(".white-bg").css("display", "block");
+                $(".white-bg").addClass("show-modal");
+            });
+            $("#close").on("click", function () {
+                $(".white-bg").removeClass("show-modal");
             });
         </script>
     </body>
