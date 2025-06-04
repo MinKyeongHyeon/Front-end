@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .box {
+                width: 50vw;
+                height: 30 vw;
+                padding: 50px;
+            }
+            .bg-dark {
+                background-color: darkgreen;
+                color: white;
+            }
+            .bg-light {
+                background-color: lightblue;
+                color: black;
+            }
+        </style>
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <div class="box bg-light">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Consectetur recusandae voluptatibus voluptate ipsam sed. Magnam
+                repellendus, atque, tenetur molestias reprehenderit laudantium
+                tempora id perspiciatis quia autem in, amet porro cupiditate.
+            </p>
+        </div>
+        <button class="mode-btn">
+            <span id="mode">Dark 🔄</span>
+        </button>
+
+        <script>
+            var count = 0;
+            $(".mode-btn").on("click", function () {
+                count = count + 1;
+                if (count % 2 == 1) {
+                    $(".box").removeClass("bg-dark").addClass("bg-light");
+                    $("#mode").html("Dark 🔄");
+                } else if (count % 2 == 0) {
+                    $(".box").removeClass("bg-light").addClass("bg-dark");
+                    $("#mode").html("Light 🔄");
+                }
+            });
+        </script>
+    </body>
+</html>
