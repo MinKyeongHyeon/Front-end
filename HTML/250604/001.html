@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            /* 1. 후자우선의 원칙 동일한 선택자에 동일한 속성이 있을때 후자가 우선 적용되는 원칙 */
+            p {
+                color: red;
+            }
+            p {
+                color: orange;
+            }
+            p {
+                color: green;
+            }
+            #container p {
+                color: blue;
+            } /* 구체성: 100 + 1 */
+            div .text {
+                color: red;
+            } /* 구체성: 10 + 1 */
+            p {
+                color: green;
+            } /* 구체성: 1 */
+
+            .ul a {
+                color: yellow;
+            }
+            .click {
+                color: green;
+                background-color: black;
+            }
+            html body main section article div ul li p strong span a {
+                color: red;
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <p>hello world</p>
+        <div id="container">
+            <p>hello~</p>
+        </div>
+        <main>
+            <section>
+                <article>
+                    <div>
+                        <ul class="ul">
+                            <li>
+                                <p>
+                                    <strong>
+                                        <span>
+                                            <a href="" class="click"
+                                                >1. 이 글자는 어떤 색일까요? 2.
+                                                배경색은 어떤 색일까요?
+                                            </a>
+                                        </span></strong
+                                    >
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </body>
+</html>
