@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>숙제엉엉</title>
+        <style>
+            button {
+                width: 88px;
+                height: 32px;
+                margin-bottom: 30px;
+            }
+            #normal {
+                background-color: #343f50;
+                color: #cbd5df;
+                border: 1px solid #1a202c;
+                box-shadow: 2px 2px 0px 0px #ffffff1a inset;
+            }
+            #normal:hover {
+                color: #fff;
+                background: #343F50;
+                border: 1px solid #1A202C;
+                box-shadow: 2px 2px 0px 0px #FFFFFF33 inset;
+            }
+            #normal:active {
+                color: #fff;
+                background: #343F50;
+                border: 1px solid #1A202C;
+                box-shadow: 2px 2px 0px 0px #00000033 inset;
+            }
+            #normal:disabled {
+                color: #4a5568;
+                background: #343F50;
+                border: 1px solid #1A202C
+            }
+            #positive {
+                background-color: #343f50;
+                color: #439aff;
+                border: 1px solid #1A202C
+                box-shadow: 2px 2px 0px 0px #FFFFFF1A inset;
+
+            }
+            #positive:hover{
+                color: #fff;
+                background-color: #439AFF;
+                border: 1px solid #439AFF;
+                box-shadow: 2px 2px 0px 0px #FFFFFF33 inset;
+            }
+            #positive:active{
+                color: #fff;
+                background: #439AFF;
+                border: 1px solid #439AFF;
+                box-shadow: 2px 2px 0px 0px #00000033 inset;
+            }
+            #negative{
+                color: #EB5757 ;
+                background: #343F50;
+                border: 1px solid #1A202C
+                box-shadow: 2px 2px 0px 0px #00000033 inset;
+            }
+            #negative:hover{
+                color: #fff;
+                background: #EB5757;
+                border: 1px solid #EB5757;
+                box-shadow: 2px 2px 0px 0px #FFFFFF33 inset;
+            }
+            #negative:active{
+                color: #fff;
+                background: #EB5757;
+                border: 1px solid #EB5757;
+                box-shadow: 2px 2px 0px 0px #00000033 inset;
+            }
+            #button1{
+
+                width: 80px;
+                height: 40px;
+                color: white;
+                border: 5px solid black;
+                background-color: rgb(90,99,109);
+                box-shadow: 4px 4px 0px 0px rgb(122,133,145) inset;
+            }
+            #button2{
+                width: 80px;
+                height: 40px;
+                color: white;
+                background: linear-gradient(90deg, rgb(120,80,237),rgb(70,107,234));
+                background-clip: padding-box;
+                border: 5px dashed lightgray ;
+                border-radius: 20px;
+            }
+            #button3{
+                width: 80px;
+                height: 40px;
+                color: black;
+                background-color: white;
+                border: 2px solid rgb(180, 195, 220);
+                border-radius: 0 20px 20px 20px;}
+        </style>
+    </head>
+    <body>
+        <div>
+            <button id="normal">Button</button>
+            <button id="positive">Yes</button>
+            <button id="negative">Del</button>
+            <button id="disable">disabled</button>
+            <br />
+            <button id="button1">Hello👋</button>
+            <button id="button2">Hello👋</button>
+            <button id="button3">Hello👋</button>
+        </div>
+
+        <script>
+            document.getElementById("disable").onclick = function () {
+                document.getElementById("normal").disabled = true;
+            };
+        </script>
+    </body>
+</html>
