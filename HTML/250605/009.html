@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            div {
+                width: 1000px;
+                height: 1200px;
+                border: solid 5px black;
+
+                background-image: url(./images/bg.png);
+                background-repeat: no-repeat;
+
+                /* 배경이미지 크기 조절 */
+                /* 여백이 발생하지만 맞춰줌. 이미지 비율을 유지해주고 이미지가 짤리지 않음. */
+                background-size: contain;
+                /* 여백이 발생하지 않음. 이미지비율을 유지하지만 이미지가 짤릴 가능성이 있음 */
+                background-size: cover;
+                /* 가로, 세로 크기 지정, 상대단위/절대단위 모두 사용 가능 */
+                background-size: 500px 700px;
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>
