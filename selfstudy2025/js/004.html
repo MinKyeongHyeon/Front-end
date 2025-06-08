@@ -42,24 +42,41 @@
 
         <script>
             var next = 0;
-            document
-                .querySelector(".slide1")
-                .addEventListener("click", function () {
+
+            function slideImg () {
+                    let num = this.innerHTML;
                     document.querySelector(".slide-container").style.transform =
-                        "translateX(0vw)";
-                });
+                        "translateX(-"+ (num-1)*100 +"vw)";
+                        console.log(num);}
+
             document
-                .querySelector(".slide2")
-                .addEventListener("click", function () {
-                    document.querySelector(".slide-container").style.transform =
-                        "translateX(-100vw)";
-                });
-            document
-                .querySelector(".slide3")
-                .addEventListener("click", function () {
-                    document.querySelector(".slide-container").style.transform =
-                        "translateX(-200vw)";
-                });
+                .querySelectorAll('button[class^="slide"]').forEach(function(btn){
+                    btn.addEventListener("click", slideImg);
+                })
+                ;
+
+
+
+            // document
+            //     .querySelector(".slide1")
+            //     .addEventListener("click", function () {
+            //         document.querySelector(".slide-container").style.transform =
+            //             "translateX(0vw)";
+            //     });
+            // document
+            //     .querySelector(".slide2")
+            //     .addEventListener("click", function () {
+            //         document.querySelector(".slide-container").style.transform =
+            //             "translateX(-100vw)";
+            //     });
+            // document
+            //     .querySelector(".slide3")
+            //     .addEventListener("click", function () {
+            //         document.querySelector(".slide-container").style.transform =
+            //             "translateX(-200vw)";
+            //     });
+            
+
             // document
             //     .querySelector(".next-btn")
             //     .addEventListener("click", function () {
@@ -67,7 +84,7 @@
             //             next = 0;
             //         } else {
             //             next = next + 100;
-            //         }
+            //     ∏    }
             //         document.querySelector(".slide-container").style.transform =
             //             "translateX(-" + next + "vw)";
             //         console.log(next);
@@ -77,7 +94,7 @@
                 if (next == 200) {
                     next = 0;
                 } else {
-                    next = next + 100;
+                    next += 100;
                 }
                 document.querySelector(".slide-container").style.transform =
                     "translateX(-" + next + "vw)";
