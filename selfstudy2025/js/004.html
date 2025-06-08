@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .slide-container {
+                width: 300vw;
+                transform: translateX(0vw);
+                transition: all 1s;
+            }
+            .slide-box {
+                width: 100vw;
+                float: left;
+            }
+            .slide-box img {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="overflow: hidden">
+            <div class="slide-container">
+                <div class="slide-box">
+                    <img src="./img/car1-1.png" alt="" />
+                </div>
+                <div class="slide-box">
+                    <img src="./img/car2-1.png" alt="" />
+                </div>
+                <div class="slide-box">
+                    <img src="./img/car3-1.png" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <button class="slide1">1</button>
+        <button class="slide2">2</button>
+        <button class="slide3">3</button>
+        <button class="next-btn" onclick="test()">다음</button>
+        <!-- 여기에 test()를 선언해도 상관없는 이유는 브라우저가 자바스크립트를 먼저 호이스팅 하기 때문 -->
+
+        <script>
+            var next = 0;
+            document
+                .querySelector(".slide1")
+                .addEventListener("click", function () {
+                    document.querySelector(".slide-container").style.transform =
+                        "translateX(0vw)";
+                });
+            document
+                .querySelector(".slide2")
+                .addEventListener("click", function () {
+                    document.querySelector(".slide-container").style.transform =
+                        "translateX(-100vw)";
+                });
+            document
+                .querySelector(".slide3")
+                .addEventListener("click", function () {
+                    document.querySelector(".slide-container").style.transform =
+                        "translateX(-200vw)";
+                });
+            // document
+            //     .querySelector(".next-btn")
+            //     .addEventListener("click", function () {
+            //         if (next == 200) {
+            //             next = 0;
+            //         } else {
+            //             next = next + 100;
+            //         }
+            //         document.querySelector(".slide-container").style.transform =
+            //             "translateX(-" + next + "vw)";
+            //         console.log(next);
+            //     });
+
+            function test() {
+                if (next == 200) {
+                    next = 0;
+                } else {
+                    next = next + 100;
+                }
+                document.querySelector(".slide-container").style.transform =
+                    "translateX(-" + next + "vw)";
+                console.log(next);
+            }
+            //온클릭으로 작성하면 도큐먼트 최상단을 호출하는 방식보다 직접호출하는 방식으로 작동하기 때문에, 컴포넌트 구조가 복잡해도 에러가 나지 않음.
+        </script>
+    </body>
+</html>
