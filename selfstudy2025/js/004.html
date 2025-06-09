@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+            .alert {
+                display: block;
+                width: 300px;
+                height: 100px;
+                padding: 50px;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="alert">
+            !!!<span id="clock">5</span>!!!초 이내 구매시 사은품 줌
+        </div>
+
+        <!-- JQuery--------------------- -->
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- JQuery---------------- -->
+
+        <script>
+            var milsec = 5000;
+            var sec = $("#clock").html();
+            // console.log(sec);
+            function hide() {
+                $(".alert").hide();
+            }
+            function countsec() {
+                sec -= 1;
+                $("#clock").html(sec);
+            }
+            setInterval(countsec, 1000);
+            setTimeout(hide, milsec);
+        </script>
+    </body>
+</html>
