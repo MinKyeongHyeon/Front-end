@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>LoginModal</title>
+        <style>
+            @font-face {
+                font-family: "SpoqaHanSansNeo-Regular";
+                src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff")
+                    format("woff");
+                font-weight: normal;
+                font-style: normal;
+            }
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                font-family: SpoqaHanSansNeo;
+                margin: 0;
+                padding: 0;
+                background-color: #eee;
+                font-size: 12px;
+            }
+            .loginmodal {
+                padding: 19px 16px;
+                display: flex;
+                gap: 16px;
+                flex-direction: column;
+                justify-content: space-between;
+                background-color: white;
+                width: 350px;
+                height: 140px;
+                border-radius: 5px;
+                border-width: 1px;
+
+                font-weight: 400;
+                line-height: 100%;
+                letter-spacing: 0%;
+                box-sizing: border-box;
+            }
+            .loginmodal h2 {
+                margin: 0;
+                font-size: 12px;
+                font-weight: 400;
+            }
+            .loginbutton {
+                display: flex;
+                gap: 4px;
+                align-items: center;
+                justify-content: center;
+                background-color: #711bff;
+                width: 318px;
+                height: 40px;
+
+                border-radius: 4px;
+                text-decoration: none;
+                color: white;
+            }
+            .loginbutton img {
+                width: 64px;
+                height: 18px;
+            }
+            .idpw {
+                display: flex;
+                align-items: center;
+                float: left;
+                gap: 4px;
+                color: #767676;
+            }
+            .idpw img {
+                width: 16px;
+                height: 16px;
+            }
+            .signin {
+                display: flex;
+                align-items: center;
+
+                gap: 4px;
+                color: #767676;
+                float: right;
+            }
+            .signin img {
+                width: 16px;
+                height: 16px;
+            }
+            .link::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <article class="loginmodal">
+            <h2>더 편리해진 위니브에 오신 것을 환영합니다.</h2>
+            <a href="#" class="loginbutton"
+                ><img src="./img/weniv-logo.png" alt="weniv" /> 로그인</a
+            >
+            <div class="link">
+                <div class="idpw">
+                    <img src="./img/icon-lock.png" alt="" />
+                    아이디<span>|</span>비밀번호찾기
+                </div>
+                <div class="signin">
+                    <img src="./img/icon-user.png" alt="" /> 회원가입
+                </div>
+            </div>
+        </article>
+    </body>
+</html>
