@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="pw">
+    <button class="sub">가입하기</button>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        
+        var sub = $('.sub');
+        sub.on('click', function() {
+            var pw = $('.pw').val();
+            if(/[A-Z]/.test(pw) == false){
+                alert('대문자를 포함하시오~')
+            }
+            if(pw.length < 8){
+                alert('비밀번호는 8자 이상이어야 합니다.');
+            }});
+    </script>
+
+</body>
+</html>

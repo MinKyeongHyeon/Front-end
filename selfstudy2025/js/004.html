@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+<<<<<<< HEAD
 
         <style>
             .alert {
@@ -12,10 +13,25 @@
                 height: 100px;
                 padding: 50px;
                 border: 1px solid black;
+=======
+        <style>
+            .slide-container {
+                width: 300vw;
+                transform: translateX(0vw);
+                transition: all 1s;
+            }
+            .slide-box {
+                width: 100vw;
+                float: left;
+            }
+            .slide-box img {
+                width: 100%;
+>>>>>>> origin/main
             }
         </style>
     </head>
     <body>
+<<<<<<< HEAD
         <div class="alert">
             !!!<span id="clock">5</span>!!!초 이내 구매시 사은품 줌
         </div>
@@ -42,6 +58,102 @@
             }
             setInterval(countsec, 1000);
             setTimeout(hide, milsec);
+=======
+        <div style="overflow: hidden">
+            <div class="slide-container">
+                <div class="slide-box">
+                    <img src="./img/car1-1.png" alt="" />
+                </div>
+                <div class="slide-box">
+                    <img src="./img/car2-1.png" alt="" />
+                </div>
+                <div class="slide-box">
+                    <img src="./img/car3-1.png" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <button class="slide1">1</button>
+        <button class="slide2">2</button>
+        <button class="slide3">3</button>
+        <button class="next-btn" onclick="before_btn()">이전</button>
+        <button class="next-btn" onclick="next_btn()">다음</button>
+        
+        <!-- 여기에 test()를 선언해도 상관없는 이유는 브라우저가 자바스크립트를 먼저 호이스팅 하기 때문 -->
+
+        <script>
+            var next = 0;
+            function slideImg () {
+                    let num = this.innerHTML;
+                    next = (num -1)*100;
+                    document.querySelector(".slide-container").style.transform =
+                        "translateX(-"+ (num-1)*100 +"vw)";
+                        console.log(num);}
+
+            document
+                .querySelectorAll('button[class^="slide"]').forEach(function(btn){
+                    btn.addEventListener("click", slideImg);
+                    
+                })
+                ;
+
+
+
+            // document
+            //     .querySelector(".slide1")
+            //     .addEventListener("click", function () {
+            //         document.querySelector(".slide-container").style.transform =
+            //             "translateX(0vw)";
+            //     });
+            // document
+            //     .querySelector(".slide2")
+            //     .addEventListener("click", function () {
+            //         document.querySelector(".slide-container").style.transform =
+            //             "translateX(-100vw)";
+            //     });
+            // document
+            //     .querySelector(".slide3")
+            //     .addEventListener("click", function () {
+            //         document.querySelector(".slide-container").style.transform =
+            //             "translateX(-200vw)";
+            //     });
+            
+
+            // document
+            //     .querySelector(".next-btn")
+            //     .addEventListener("click", function () {
+            //         if (next == 200) {
+            //             next = 0;
+            //         } else {
+            //             next = next + 100;
+            //     ∏    }
+            //         document.querySelector(".slide-container").style.transform =
+            //             "translateX(-" + next + "vw)";
+            //         console.log(next);
+            //     });
+
+            function before_btn() {
+                if (next == 0) {
+                    next = 200;
+                } else {
+                    next -= 100;
+                }
+                document.querySelector(".slide-container").style.transform =
+                    "translateX(-" + next + "vw)";
+                console.log(next);
+            }
+            function next_btn() {
+                if (next == 200) {
+                    next = 0;
+                } else {
+                    next += 100;
+                }
+                document.querySelector(".slide-container").style.transform =
+                    "translateX(-" + next + "vw)";
+                console.log(next);
+            }
+            //온클릭으로 작성하면 도큐먼트 최상단을 호출하는 방식보다 직접호출하는 방식으로 작동하기 때문에, 컴포넌트 구조가 복잡해도 에러가 나지 않음.
+>>>>>>> origin/main
         </script>
     </body>
 </html>
