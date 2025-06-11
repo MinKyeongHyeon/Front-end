@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../CSS/reset-css.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            .body {
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                width: 1060px;
+                height: 1170px;
+                border-radius: 15px;
+                background-color: #f2f2f2;
+                border: 2px solid #bdbdbd;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 28px;
+            }
+            h1 {
+                margin: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 650px;
+                height: 102px;
+                border-bottom: 2px solid #bdbdbd;
+                font-family: roboto;
+                font-weight: 700;
+            }
+            header {
+                display: flex;
+                flex-direction: row;
+                gap: 60px;
+            }
+            h2 {
+                margin: 0;
+                font-family: roboto;
+                font-weight: 900;
+            }
+
+            main {
+                width: 1003px;
+                height: 962px;
+                background-color: #fff;
+                border-radius: 15px;
+                border: 2px solid #bdbdbd;
+
+                display: grid;
+            }
+            .disabled {
+                font-weight: 500;
+                color: #828282;
+            }
+            .movie {
+                width: 220px;
+                height: 441px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                padding: 19px 20px 0px 20px;
+                box-sizing: border-box;
+                border: 1px solid #bdbdbd;
+                border-radius: 10px;
+                box-shadow: 0px 0px 5px 0px #0000004d;
+                overflow: hidden;
+            }
+            .movie > img {
+                width: 180px;
+                height: 250px;
+                border-radius: 10px;
+                border: 1px solid #bdbdbd;
+                box-shadow: 0px 4px 4px 0px #00000040;
+            }
+            .movie h3 {
+                font-family: Noto sans;
+                font-weight: 900;
+            }
+            .movie ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                column-gap: 42px;
+                row-gap: 5px;
+            }
+            .movie li {
+                height: 19px;
+                font-family: Noto sans;
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 100%;
+                letter-spacing: 0;
+                align-content: center;
+            }
+            .movie li img {
+                height: 14px;
+                position: relative;
+                top: 2px;
+            }
+            .movie li span {
+                color: #828282;
+                margin-right: 5px;
+            }
+            .link {
+                width: 220px;
+                height: 41px;
+                border-top: 1px solid #bdbdbd;
+                display: grid;
+                grid-template-columns: 1fr auto 1fr;
+                background-color: #f2f2f2;
+                justify-items: center;
+                align-items: center;
+            }
+            .link a {
+                text-decoration: none;
+                font-family: noto sans;
+                font-weight: 500;
+                font-size: 14px;
+
+                color: black;
+            }
+            .link button {
+                border: none;
+                cursor: pointer;
+                font-family: noto sans;
+                font-weight: 500;
+                font-size: 14px;
+                text-align: center;
+                display: flex;
+                gap: 2px;
+            }
+
+            .link span {
+                height: 100%;
+                border-left: 1px solid #bdbdbd;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>정글 시네마 영화 목록</h1>
+            <header>
+                <h2>현재상영영화</h2>
+                <h2 class="disabled">개봉예정영화</h2>
+                <h2 class="disabled">박스오피스</h2>
+            </header>
+            <main>
+                <div class="movie">
+                    <img src="./img/poster1.jpg" alt="위니브월드poster" />
+                    <h3>위니브 월드 : 새로운 시대</h3>
+                    <ul>
+                        <li><span>개요</span>판타지</li>
+                        <li>
+                            <span>평점</span
+                            ><img src="./img/Star 1.svg" alt="별점" /> 9.05
+                        </li>
+                        <li><span>개봉</span>2021.03.27</li>
+                        <li><span>출연</span>라이캣, 소울곰, 개리씨</li>
+                    </ul>
+                    <div class="link">
+                        <a href="#">예매하기</a>
+                        <span></span>
+                        <button>
+                            <img src="./img/play-circle.svg" alt="" /> 예고편
+                        </button>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <footer></footer>
+    </body>
+</html>

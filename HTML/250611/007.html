@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .container {
+                width: 600px;
+                height: 600px;
+                display: grid;
+                grid-template-columns: repeat(3, 100px);
+                grid-template-rows: repeat(2, 100px);
+            }
+
+            .container > div {
+                width: 50px;
+                height: 50px;
+            }
+
+            .item1 {
+                background-color: lightblue;
+                align-self: center;
+                justify-self: center;
+                /* align-self, justify-self의 단축속성 */
+                place-self: center end;
+            }
+            .item2 {
+                background-color: lightcoral;
+                order: 6;
+            }
+            .item3 {
+                background-color: rgb(37, 75, 75);
+                order: 5;
+            }
+            .item4 {
+                background-color: rgb(43, 31, 152);
+                order: 4;
+            }
+            .item5 {
+                background-color: rgb(181, 3, 80);
+                order: 3;
+            }
+            .item6 {
+                background-color: rgb(225, 197, 35);
+                order: 2;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item1">item1</div>
+            <div class="item2">item2</div>
+            <div class="item3">item3</div>
+            <div class="item4">item4</div>
+            <div class="item5">item5</div>
+            <div class="item6">item6</div>
+        </div>
+    </body>
+</html>

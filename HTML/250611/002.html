@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>grid실습</title>
+        <style>
+            .container {
+                display: grid;
+                gap: 10px;
+                padding: 10px;
+            }
+            .auto-fill {
+                background-color: lightblue;
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+            .auto-fit {
+                background-color: lightcoral;
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            }
+            .items {
+                background-color: black;
+                color: white;
+                font-size: 32px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container auto-fill">
+            <div class="items">1</div>
+            <div class="items">2</div>
+            <div class="items">3</div>
+            <div class="items">4</div>
+            <div class="items">5</div>
+            <div class="items">6</div>
+        </div>
+        <div class="container auto-fit">
+            <div class="items">1</div>
+            <div class="items">2</div>
+            <div class="items">3</div>
+            <div class="items">4</div>
+            <div class="items">5</div>
+            <div class="items">6</div>
+        </div>
+    </body>
+</html>

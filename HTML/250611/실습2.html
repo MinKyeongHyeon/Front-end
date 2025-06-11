@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            article {
+                background-color: lightcoral;
+                height: 100vh;
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+
+                grid-template-areas:
+                    "header header header header header"
+                    "section section section section aside"
+                    "footer footer footer footer footer";
+            }
+            header {
+                grid-area: header;
+                border: 5px solid black;
+            }
+            section {
+                grid-area: section;
+                border-left: 5px solid black;
+                border-right: 5px solid black;
+            }
+            aside {
+                grid-area: aside;
+                border-right: 5px solid black;
+            }
+            footer {
+                grid-area: footer;
+                border: 5px solid black;
+            }
+            header,
+            section,
+            aside,
+            footer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <article>
+            <header>header</header>
+            <section>section</section>
+            <aside>aside</aside>
+            <footer>footer</footer>
+        </article>
+    </body>
+</html>

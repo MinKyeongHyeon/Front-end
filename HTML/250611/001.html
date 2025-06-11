@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>grid실습</title>
+        <style>
+            .container {
+                height: 100vh;
+                background-color: #eee;
+                display: grid;
+
+                /* 열방향 그리드 트랙 사이즈 설정 */
+                grid-template-columns: 100px 200px 300px;
+                grid-template-columns: 10% 20% 30%;
+                grid-template-columns: 1fr 2fr 3fr;
+
+                /* 행방향 그리드 트랙 사이즈 설정 */
+                grid-template-rows: 100px 200px 300px;
+                grid-template-rows: 10% 20% 30%;
+                grid-template-rows: 1fr 2fr 3fr;
+                /* repeat으로 반복하는 방법도 있음. 횟수, 값 */
+                grid-template-rows: repeat(6, 1fr);
+
+                grid-template-columns: 200px 1fr;
+                grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr);
+                grid-template-columns: repeat(2, minmax(100px, 1fr));
+            }
+            .item {
+                background-color: lightcoral;
+                border: solid 1px black;
+                font-size: 32px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item">&</div>
+            <div class="item">&</div>
+            <div class="item">&</div>
+            <div class="item">&</div>
+            <div class="item">&</div>
+            <div class="item">&</div>
+            <div class="item">&</div>
+            <div class="item">&</div>
+        </div>
+    </body>
+</html>

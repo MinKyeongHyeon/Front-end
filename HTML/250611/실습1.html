@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            article {
+                background-color: lightcoral;
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+            }
+            .display {
+                display: flex;
+
+                padding: 10px;
+                align-items: center;
+                justify-content: center;
+            }
+            header {
+                border: solid 5px black;
+            }
+            main {
+                display: flex;
+                flex-grow: 4;
+                width: 100%;
+            }
+            section {
+                flex-grow: 7;
+                border-left: 5px solid black;
+                border-right: 5px solid black;
+            }
+            aside {
+                flex-grow: 2;
+                border-right: 5px solid black;
+            }
+            footer {
+                border: 5px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <article>
+            <header class="display">header</header>
+            <main>
+                <section class="display">section</section>
+                <aside class="display">aside</aside>
+            </main>
+            <footer class="display">footer</footer>
+        </article>
+    </body>
+</html>
