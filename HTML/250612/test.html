@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .body-color {
+                background-color: #dda463;
+            }
+            .stripe-color {
+                background-color: #533030;
+            }
+            .round {
+                border-radius: 50%;
+            }
+            .absolute {
+                position: absolute;
+            }
+            /* 공통요소 */
+            .head {
+                width: 341px;
+                height: 298px;
+                position: relative;
+            }
+            .leftEar {
+                width: 122px;
+                height: 42px;
+
+                transform-origin: right center;
+                transform: rotate(21deg);
+                top: 56px;
+                left: 0px;
+            }
+            .rightEar {
+                width: 122px;
+                height: 42px;
+
+                transform-origin: left center;
+                transform: rotate(-45deg);
+                top: 80px;
+                right: 0px;
+            }
+            .face {
+                width: 309px;
+                height: 270px;
+                overflow: hidden;
+                position: absolute;
+                bottom: 0px;
+                left: 15px;
+            }
+            .face-top {
+                width: 197px;
+                height: 96px;
+
+                bottom: 195px;
+                left: 59px;
+            }
+            .eye-round {
+                width: 142px;
+                height: 123px;
+                top: 24px;
+            }
+            .eye-round_right {
+                left: 161px;
+            }
+            .eye-round_left {
+                left: 12px;
+            }
+            .eye {
+                width: 65px;
+                height: 54px;
+                top: 47px;
+                left: 35px;
+                background-color: #f8da8a;
+            }
+            .eye-right {
+                right: 41px;
+            }
+            .eyepupill {
+                width: 10px;
+                height: 50px;
+                background-color: black;
+                bottom: 4px;
+                left: 26px;
+            }
+            .eyehighlight {
+                width: 6px;
+                height: 6px;
+                background-color: white;
+                top: 11px;
+                left: 4px;
+            }
+            .teeth {
+                width: 249px;
+                height: 95px;
+                background-color: white;
+                top: 120px;
+                left: 33px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+            }
+            .teethstripe {
+                background-color: black;
+                width: 2px;
+                height: 500px;
+            }
+            .teethRotate1 {
+                transform-origin: 0 0;
+                transform: rotate(-10deg);
+            }
+            .teethRotate2 {
+                transform-origin: 0 0;
+                transform: rotate(-20deg);
+            }
+            .teethRotate3 {
+                transform-origin: 0 0;
+                transform: rotate(10deg);
+            }
+            .teethRotate4 {
+                transform-origin: 0 0;
+                transform: rotate(20deg);
+            }
+
+            .mouth {
+                width: 244px;
+                height: 51px;
+                top: 112px;
+                left: 33px;
+            }
+            .nose {
+                width: 65px;
+                height: 26px;
+                background-color: #cc5353;
+                top: 98px;
+                left: 122px;
+            }
+            .forehead {
+                width: 69px;
+                height: 91px;
+                border-radius: 15px;
+
+                top: 3px;
+                left: 118px;
+            }
+            .faceStripe {
+                width: 105px;
+                height: 39px;
+                transform: rotate(24deg);
+            }
+            .stripe1 {
+                top: 63px;
+                right: 260px;
+            }
+            .stripe2 {
+                top: 107px;
+                right: 276px;
+            }
+            .stripe3 {
+                top: 63px;
+                left: 260px;
+                transform: rotate(-24deg);
+            }
+            .stripe4 {
+                top: 98px;
+                left: 279px;
+                transform: rotate(-24deg);
+            }
+        </style>
+    </head>
+    <body>
+        <!-- ----머리---- -->
+        <div class="head">
+            <!-- -------귀------- -->
+            <div class="ear">
+                <div class="leftEar stripe-color round absolute"></div>
+                <div class="rightEar stripe-color round absolute"></div>
+            </div>
+            <!-- ------얼굴------ -->
+            <div class="face round body-color">
+                ------머리위쪽------
+                <div class="face-top round stripe-color absolute"></div>
+                <!-- --------눈------- -->
+                <div class="eye-round eye-round_left round absolute body-color">
+                    <div class="eye round absolute">
+                        <div class="eyepupill round absolute">
+                            <div class="eyehighlight round absolute"></div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="eye-round eye-round_right round absolute body-color"
+                >
+                    <div class="eye round absolute">
+                        <div class="eyepupill round absolute">
+                            <div class="eyehighlight round absolute"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ------입------ -->
+                <div class="teeth round absolute">
+                    <div class="teethstripe absolute"></div>
+                    <div class="teethstripe absolute teethRotate1"></div>
+                    <div class="teethstripe absolute teethRotate2"></div>
+                    <div class="teethstripe absolute teethRotate3"></div>
+                    <div class="teethstripe absolute teethRotate4"></div>
+                </div>
+                <!-- -------입 위쪽 덩어리------- -->
+                <div class="mouth body-color round absolute"></div>
+                <!-- -------코------- -->
+                <div class="nose round absolute"></div>
+                <!-- -------앞머리------- -->
+                <div class="forehead absolute stripe-color"></div>
+                <!-- -------얼굴무늬------- -->
+                <div
+                    class="faceStripe stripe1 round absolute stripe-color"
+                ></div>
+                <div
+                    class="faceStripe stripe2 round absolute stripe-color"
+                ></div>
+                <div
+                    class="faceStripe stripe3 round absolute stripe-color"
+                ></div>
+                <div
+                    class="faceStripe stripe4 round absolute stripe-color"
+                ></div>
+            </div>
+            <!-- ------얼굴끝----- -->
+        </div>
+        <!-- -------머리끝--------- -->
+        <div class="body"></div>
+    </body>
+</html>

@@ -1,12 +1,9 @@
-html,
-body {
-    height: 100vh;
-}
 body {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
+    min-height: 100vh;
 }
 .container {
     margin-top: 5vh;
@@ -23,9 +20,12 @@ body {
 }
 h1 {
     margin: 0;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
+    아래가 더 간결한 구현 코드*/
+    text-align: center;
+    line-height: 102px;
     width: 650px;
     height: 102px;
     border-bottom: 2px solid #bdbdbd;
@@ -190,3 +190,4 @@ footer {
 .lowerFooter span {
     font-weight: 400;
 }
+/* 중복되는 css를 최적화 할 수 있을것만 같지만 아직은 잘 모르겠다. root를 쓰는거 외에도 방법이 있을것만 같은데 ,,, */
