@@ -172,6 +172,41 @@
                 left: 279px;
                 transform: rotate(-24deg);
             }
+            .catBody {
+                width: 569px;
+                height: 339px;
+                position: relative;
+                border-radius: 124px;
+                overflow: hidden;
+            }
+            .windows {
+                width: 449px;
+                height: 115px;
+                top: 40px;
+                left: 53px;
+                display: flex;
+                justify-content: space-between;
+            }
+            .window {
+                width: 91px;
+                height: 115px;
+                border-radius: 10px;
+                background-color: #453b2a;
+            }
+            .windowsBlue {
+                width: 426px;
+                height: 88px;
+                top: 54px;
+                left: 65px;
+                display: flex;
+                justify-content: space-between;
+            }
+            .windowBlue {
+                width: 68px;
+                height: 88px;
+                border-radius: 8px;
+                background-color: #5f95d3;
+            }
         </style>
     </head>
     <body>
@@ -234,6 +269,22 @@
             <!-- ------얼굴끝----- -->
         </div>
         <!-- -------머리끝--------- -->
-        <div class="body"></div>
+        <!-- ---------몸통----------- -->
+        <div class="catBody body-color">
+            <!-- ----------창문 앞쪽----------- -->
+            <div class="windows absolute">
+                <div class="window"></div>
+                <div class="window"></div>
+                <div class="window"></div>
+                <div class="window"></div>
+            </div>
+            <!-- ------------창문바깥쪽-------------- -->
+            <div class="windowsBlue absolute">
+                <div class="windowBlue"></div>
+                <div class="windowBlue"></div>
+                <div class="windowBlue"></div>
+                <div class="windowBlue"></div>
+            </div>
+        </div>
     </body>
 </html>
