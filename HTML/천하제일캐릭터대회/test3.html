@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+            @keyframes runingLeg {
+                0%,
+                100% {
+                    transform: rotateZ(45deg) rotateX(45deg);
+                }
+                50% {
+                    transform: rotateZ(-45deg) rotateX(15deg);
+                }
+                25% {
+                    transform: rotateX(-15deg);
+                }
+                75% {
+                    transform: rotateX(18deg);
+                }
+            }
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                perspective: 400px;
+            }
+            .runLeg {
+                width: 90px;
+                height: 118px;
+                margin-top: 100px;
+                border-radius: 55px 55px 30px 30px;
+
+                animation: runingLeg 1s linear infinite;
+                position: relative;
+                overflow: hidden;
+            }
+            .leg {
+                top: 30px;
+                width: 90px;
+                height: 118px;
+                background-color: #ca8435;
+            }
+            .paw {
+                position: absolute;
+                top: 108px;
+                width: 90px;
+                height: 20px;
+                background-color: #b9724c;
+            }
+            .largePattern {
+                width: 83px;
+                height: 31px;
+                background-color: #533030;
+                top: 33px;
+                right: 27px;
+                position: absolute;
+            }
+            .smallPattern {
+                width: 62px;
+                height: 18px;
+                top: 73px;
+                right: 48px;
+                background-color: #533030;
+                position: absolute;
+            }
+            .claw {
+                position: absolute;
+                width: 8px;
+                height: 17px;
+                background-color: #533030;
+            }
+            .claw1 {
+                top: 100px;
+                left: 24px;
+            }
+            .claw2 {
+                top: 96px;
+                left: 42px;
+            }
+            .claw3 {
+                top: 100px;
+                left: 59px;
+            }
+
+            .legTiming {
+                --i: 5;
+                animation-delay: calc(100ms * var(--i));
+            }
+            .round {
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="runLeg legTiming" style="--i: 0">
+            <div class="leg">
+                <div class="largePattern round"></div>
+                <div class="smallPattern round"></div>
+                <div class="paw round"></div>
+                <div class="round claw claw1"></div>
+                <div class="round claw claw2"></div>
+                <div class="round claw claw3"></div>
+            </div>
+        </div>
+        <div class="runLeg legTiming" style="--i: 1">
+            <div class="leg">
+                <div class="largePattern round"></div>
+                <div class="smallPattern round"></div>
+                <div class="paw round"></div>
+                <div class="round claw claw1"></div>
+                <div class="round claw claw2"></div>
+                <div class="round claw claw3"></div>
+            </div>
+        </div>
+        <div class="runLeg legTiming" style="--i: 2">
+            <div class="leg">
+                <div class="largePattern round"></div>
+                <div class="smallPattern round"></div>
+                <div class="paw round"></div>
+                <div class="round claw claw1"></div>
+                <div class="round claw claw2"></div>
+                <div class="round claw claw3"></div>
+            </div>
+        </div>
+        <div class="runLeg legTiming" style="--i: 3">
+            <div class="leg">
+                <div class="largePattern round"></div>
+                <div class="smallPattern round"></div>
+                <div class="paw round"></div>
+                <div class="round claw claw1"></div>
+                <div class="round claw claw2"></div>
+                <div class="round claw claw3"></div>
+            </div>
+        </div>
+        <div class="runLeg legTiming" style="--i: 4">
+            <div class="leg">
+                <div class="largePattern round"></div>
+                <div class="smallPattern round"></div>
+                <div class="paw round"></div>
+                <div class="round claw claw1"></div>
+                <div class="round claw claw2"></div>
+                <div class="round claw claw3"></div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -5,6 +5,49 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <style>
+            @keyframes catBus_run {
+                0%,
+                100% {
+                    transform: translateY(30px);
+                }
+                50% {
+                    transform: translateY(-30px);
+                }
+            }
+            @keyframes runingLeg {
+                0%,
+                100% {
+                    transform: rotateZ(45deg) rotateX(45deg);
+                }
+                50% {
+                    transform: rotateZ(-45deg) rotateX(15deg);
+                }
+                25% {
+                    transform: rotateX(-15deg);
+                }
+                75% {
+                    transform: rotateX(18deg);
+                }
+            }
+            @keyframes headMove {
+                0%,
+                100% {
+                    transform: translateY(-10px);
+                }
+                50% {
+                    transform: translateY(10px);
+                }
+            }
+            @keyframes bodyMove {
+                0%,
+                100% {
+                    transform: scaleY(1.05);
+                }
+                50% {
+                    transform: scaleY(1);
+                }
+            }
+
             body {
                 margin: 0;
                 padding: 0;
@@ -22,10 +65,23 @@
                 position: absolute;
             }
             /* 공통요소 */
+            .catBus {
+                width: 890px;
+                height: 468px;
+                position: relative;
+                animation: catBus_run 3s infinite
+                    cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+            /* --머리-- */
             .head {
                 width: 341px;
                 height: 298px;
-                position: relative;
+                position: absolute;
+                top: 66px;
+                left: 20px;
+                z-index: 1;
+                animation: headMove 1s cubic-bezier(0.075, 0.82, 0.165, 1)
+                    infinite;
             }
             .leftEar {
                 width: 122px;
@@ -172,10 +228,15 @@
                 left: 279px;
                 transform: rotate(-24deg);
             }
+            /* --머리-- */
+            /* -------------몸통------------ */
             .catBody {
                 width: 569px;
                 height: 339px;
-                position: relative;
+                top: 53px;
+                left: 248px;
+                animation: bodyMove 1s infinite;
+                position: absolute;
                 border-radius: 124px;
                 overflow: hidden;
             }
@@ -217,86 +278,214 @@
                 height: 38px;
                 top: 173px;
             }
+            /* --몸통-- */
+            /* --다리-- */
+            .catLeg {
+                top: 207px;
+                left: 300px;
+                position: absolute;
+                display: flex;
+            }
+            .runLeg {
+                width: 90px;
+                height: 118px;
+                margin-top: 100px;
+                border-radius: 55px 55px 30px 30px;
+
+                animation: runingLeg 1s linear infinite;
+                position: relative;
+                overflow: hidden;
+            }
+            .leg {
+                top: 30px;
+                width: 90px;
+                height: 118px;
+                background-color: #ca8435;
+            }
+            .paw {
+                position: absolute;
+                top: 108px;
+                width: 90px;
+                height: 20px;
+                background-color: #b9724c;
+            }
+            .largePattern {
+                width: 83px;
+                height: 31px;
+                background-color: #533030;
+                top: 33px;
+                right: 27px;
+                position: absolute;
+            }
+            .smallPattern {
+                width: 62px;
+                height: 18px;
+                top: 73px;
+                right: 48px;
+                background-color: #533030;
+                position: absolute;
+            }
+            .claw {
+                position: absolute;
+                width: 8px;
+                height: 17px;
+                background-color: #533030;
+            }
+            .claw1 {
+                top: 100px;
+                left: 24px;
+            }
+            .claw2 {
+                top: 96px;
+                left: 42px;
+            }
+            .claw3 {
+                top: 100px;
+                left: 59px;
+            }
+
+            .legTiming {
+                --i: 5;
+                animation-delay: calc(100ms * var(--i));
+            }
         </style>
     </head>
     <body>
-        <!-- ----머리---- -->
-        <div class="head">
-            <!-- -------귀------- -->
-            <div class="ear">
-                <div class="leftEar stripe-color round absolute"></div>
-                <div class="rightEar stripe-color round absolute"></div>
-            </div>
-            <!-- ------얼굴------ -->
-            <div class="face round body-color">
-                ------머리위쪽------
-                <div class="face-top round stripe-color absolute"></div>
-                <!-- --------눈------- -->
-                <div class="eye-round eye-round_left round absolute body-color">
-                    <div class="eye round absolute">
-                        <div class="eyepupill round absolute">
-                            <div class="eyehighlight round absolute"></div>
+        <div class="catBus">
+            <!-- ----머리---- -->
+            <div class="head">
+                <!-- -------귀------- -->
+                <div class="ear">
+                    <div class="leftEar stripe-color round absolute"></div>
+                    <div class="rightEar stripe-color round absolute"></div>
+                </div>
+                <!-- ------얼굴------ -->
+                <div class="face round body-color">
+                    ------머리위쪽------
+                    <div class="face-top round stripe-color absolute"></div>
+                    <!-- --------눈------- -->
+                    <div
+                        class="eye-round eye-round_left round absolute body-color"
+                    >
+                        <div class="eye round absolute">
+                            <div class="eyepupill round absolute">
+                                <div class="eyehighlight round absolute"></div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div
-                    class="eye-round eye-round_right round absolute body-color"
-                >
-                    <div class="eye round absolute">
-                        <div class="eyepupill round absolute">
-                            <div class="eyehighlight round absolute"></div>
+                    <div
+                        class="eye-round eye-round_right round absolute body-color"
+                    >
+                        <div class="eye round absolute">
+                            <div class="eyepupill round absolute">
+                                <div class="eyehighlight round absolute"></div>
+                            </div>
                         </div>
                     </div>
+                    <!-- ------입------ -->
+                    <div class="teeth round absolute">
+                        <div class="teethstripe absolute"></div>
+                        <div class="teethstripe absolute teethRotate1"></div>
+                        <div class="teethstripe absolute teethRotate2"></div>
+                        <div class="teethstripe absolute teethRotate3"></div>
+                        <div class="teethstripe absolute teethRotate4"></div>
+                    </div>
+                    <!-- -------입 위쪽 덩어리------- -->
+                    <div class="mouth body-color round absolute"></div>
+                    <!-- -------코------- -->
+                    <div class="nose round absolute"></div>
+                    <!-- -------앞머리------- -->
+                    <div class="forehead absolute stripe-color"></div>
+                    <!-- -------얼굴무늬------- -->
+                    <div
+                        class="faceStripe stripe1 round absolute stripe-color"
+                    ></div>
+                    <div
+                        class="faceStripe stripe2 round absolute stripe-color"
+                    ></div>
+                    <div
+                        class="faceStripe stripe3 round absolute stripe-color"
+                    ></div>
+                    <div
+                        class="faceStripe stripe4 round absolute stripe-color"
+                    ></div>
                 </div>
-                <!-- ------입------ -->
-                <div class="teeth round absolute">
-                    <div class="teethstripe absolute"></div>
-                    <div class="teethstripe absolute teethRotate1"></div>
-                    <div class="teethstripe absolute teethRotate2"></div>
-                    <div class="teethstripe absolute teethRotate3"></div>
-                    <div class="teethstripe absolute teethRotate4"></div>
+                <!-- ------얼굴끝----- -->
+            </div>
+            <!-- -------머리끝--------- -->
+            <!-- ---------몸통----------- -->
+            <div class="catBody body-color">
+                <!-- ----------창문 앞쪽----------- -->
+                <div class="windows absolute">
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
                 </div>
-                <!-- -------입 위쪽 덩어리------- -->
-                <div class="mouth body-color round absolute"></div>
-                <!-- -------코------- -->
-                <div class="nose round absolute"></div>
-                <!-- -------앞머리------- -->
-                <div class="forehead absolute stripe-color"></div>
-                <!-- -------얼굴무늬------- -->
-                <div
-                    class="faceStripe stripe1 round absolute stripe-color"
-                ></div>
-                <div
-                    class="faceStripe stripe2 round absolute stripe-color"
-                ></div>
-                <div
-                    class="faceStripe stripe3 round absolute stripe-color"
-                ></div>
-                <div
-                    class="faceStripe stripe4 round absolute stripe-color"
-                ></div>
+                <!-- ------------창문바깥쪽-------------- -->
+                <div class="windowsBlue absolute">
+                    <div class="windowBlue"></div>
+                    <div class="windowBlue"></div>
+                    <div class="windowBlue"></div>
+                    <div class="windowBlue"></div>
+                </div>
+                <div class="bodyStripe-top stripe-color absolute"></div>
+                <div class="bodyStripe-bottom stripe-color absolute"></div>
             </div>
-            <!-- ------얼굴끝----- -->
-        </div>
-        <!-- -------머리끝--------- -->
-        <!-- ---------몸통----------- -->
-        <div class="catBody body-color">
-            <!-- ----------창문 앞쪽----------- -->
-            <div class="windows absolute">
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
+            <!-- ---------다리--------- -->
+            <div class="catLeg">
+                <div class="runLeg legTiming" style="--i: 0">
+                    <div class="leg">
+                        <div class="largePattern round"></div>
+                        <div class="smallPattern round"></div>
+                        <div class="paw round"></div>
+                        <div class="round claw claw1"></div>
+                        <div class="round claw claw2"></div>
+                        <div class="round claw claw3"></div>
+                    </div>
+                </div>
+                <div class="runLeg legTiming" style="--i: 1">
+                    <div class="leg">
+                        <div class="largePattern round"></div>
+                        <div class="smallPattern round"></div>
+                        <div class="paw round"></div>
+                        <div class="round claw claw1"></div>
+                        <div class="round claw claw2"></div>
+                        <div class="round claw claw3"></div>
+                    </div>
+                </div>
+                <div class="runLeg legTiming" style="--i: 2">
+                    <div class="leg">
+                        <div class="largePattern round"></div>
+                        <div class="smallPattern round"></div>
+                        <div class="paw round"></div>
+                        <div class="round claw claw1"></div>
+                        <div class="round claw claw2"></div>
+                        <div class="round claw claw3"></div>
+                    </div>
+                </div>
+                <div class="runLeg legTiming" style="--i: 3">
+                    <div class="leg">
+                        <div class="largePattern round"></div>
+                        <div class="smallPattern round"></div>
+                        <div class="paw round"></div>
+                        <div class="round claw claw1"></div>
+                        <div class="round claw claw2"></div>
+                        <div class="round claw claw3"></div>
+                    </div>
+                </div>
+                <div class="runLeg legTiming" style="--i: 4">
+                    <div class="leg">
+                        <div class="largePattern round"></div>
+                        <div class="smallPattern round"></div>
+                        <div class="paw round"></div>
+                        <div class="round claw claw1"></div>
+                        <div class="round claw claw2"></div>
+                        <div class="round claw claw3"></div>
+                    </div>
+                </div>
             </div>
-            <!-- ------------창문바깥쪽-------------- -->
-            <div class="windowsBlue absolute">
-                <div class="windowBlue"></div>
-                <div class="windowBlue"></div>
-                <div class="windowBlue"></div>
-                <div class="windowBlue"></div>
-            </div>
-            <div class="bodyStripe-top stripe-color absolute"></div>
-            <div class="bodyStripe-bottom stripe-color absolute"></div>
+            <!-- --------다리 끝---------- -->
         </div>
     </body>
 </html>

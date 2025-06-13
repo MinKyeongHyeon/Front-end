@@ -24,7 +24,7 @@
             margin-top: 100px;
             border: 1px solid black;
             transform-style: preserve-3d;
-            animation: run 6s linear infinite;
+            animation: run 1s linear infinite;
             position: relative;
         }
         .leg {
@@ -48,9 +48,10 @@
 
         .leg1 {
             --i: 13;
-            --round: calc(360deg / 13);
+            --round: calc(360deg / 14);
             transform: rotateY(calc(var(--round) * var(--i)))
-                translateZ(calc(14px * 13)) rotateX(calc(10deg * var(--i)));
+                translateZ(calc(14px * 14))
+                rotateX(calc(10deg + 5deg * var(--i)));
         }
         /* .leg2 {
             transform: rotateY(72deg) translateZ(143px);
