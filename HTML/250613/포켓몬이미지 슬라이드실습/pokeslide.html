@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>빙글빙글포켓몬</title>
+        <style>
+            @keyframes rotate {
+                from {
+                    transform: rotateY(0deg);
+                }
+                to {
+                    transform: rotateY(360deg);
+                }
+            }
+            body {
+                perspective: 200px;
+            }
+            .container {
+                margin-top: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transform-style: preserve-3d;
+                animation: rotate 6s linear infinite;
+                position: relative;
+            }
+            .poketmon {
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                border: 1px solid #eee;
+                border-radius: 10px;
+                backface-visibility: hidden;
+                box-shadow: 0 0 2px;
+            }
+            .poketmon img {
+                height: 100%;
+                aspect-ratio: 1 / 1;
+            }
+            .poke1 {
+                transform: rotateY(0deg) translateZ(115px);
+            }
+            .poke2 {
+                transform: rotateY(calc(51.43deg * 1)) translateZ(110px);
+            }
+            .poke3 {
+                transform: rotateY(calc(51.43deg * 2)) translateZ(110px);
+            }
+            .poke4 {
+                transform: rotateY(calc(51.43deg * 3)) translateZ(110px);
+            }
+            .poke5 {
+                transform: rotateY(calc(51.43deg * 4)) translateZ(110px);
+            }
+            .poke6 {
+                transform: rotateY(calc(51.43deg * 5)) translateZ(110px);
+            }
+            .poke7 {
+                transform: rotateY(calc(51.43deg * 6)) translateZ(110px);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="poketmon poke1">
+                <img src="./img/ev.png" alt="" />
+            </div>
+            <div class="poketmon poke2">
+                <img src="./img/jammanbo.png" alt="" />
+            </div>
+            <div class="poketmon poke3">
+                <img src="./img/mazayoung.png" alt="" />
+            </div>
+            <div class="poketmon poke4">
+                <img src="./img/mobugi.png" alt="" />
+            </div>
+            <div class="poketmon poke5">
+                <img src="./img/nyaong.png" alt="" />
+            </div>
+            <div class="poketmon poke6">
+                <img src="./img/pulin.png" alt="" />
+            </div>
+            <div class="poketmon poke7">
+                <img src="./img/weirdseed.png" alt="" />
+            </div>
+        </div>
+        <div class="container">
+            <div class="poketmon poke1">
+                <img src="./img/ev.png" alt="" />
+            </div>
+            <div class="poketmon poke2">
+                <img src="./img/jammanbo.png" alt="" />
+            </div>
+            <div class="poketmon poke3">
+                <img src="./img/mazayoung.png" alt="" />
+            </div>
+            <div class="poketmon poke4">
+                <img src="./img/mobugi.png" alt="" />
+            </div>
+            <div class="poketmon poke5">
+                <img src="./img/nyaong.png" alt="" />
+            </div>
+            <div class="poketmon poke6">
+                <img src="./img/pulin.png" alt="" />
+            </div>
+            <div class="poketmon poke7">
+                <img src="./img/weirdseed.png" alt="" />
+            </div>
+        </div>
+        <div class="container">
+            <div class="poketmon poke1">
+                <img src="./img/ev.png" alt="" />
+            </div>
+            <div class="poketmon poke2">
+                <img src="./img/jammanbo.png" alt="" />
+            </div>
+            <div class="poketmon poke3">
+                <img src="./img/mazayoung.png" alt="" />
+            </div>
+            <div class="poketmon poke4">
+                <img src="./img/mobugi.png" alt="" />
+            </div>
+            <div class="poketmon poke5">
+                <img src="./img/nyaong.png" alt="" />
+            </div>
+            <div class="poketmon poke6">
+                <img src="./img/pulin.png" alt="" />
+            </div>
+            <div class="poketmon poke7">
+                <img src="./img/weirdseed.png" alt="" />
+            </div>
+        </div>
+        <div class="container">
+            <div class="poketmon poke1">
+                <img src="./img/ev.png" alt="" />
+            </div>
+            <div class="poketmon poke2">
+                <img src="./img/jammanbo.png" alt="" />
+            </div>
+            <div class="poketmon poke3">
+                <img src="./img/mazayoung.png" alt="" />
+            </div>
+            <div class="poketmon poke4">
+                <img src="./img/mobugi.png" alt="" />
+            </div>
+            <div class="poketmon poke5">
+                <img src="./img/nyaong.png" alt="" />
+            </div>
+            <div class="poketmon poke6">
+                <img src="./img/pulin.png" alt="" />
+            </div>
+            <div class="poketmon poke7">
+                <img src="./img/weirdseed.png" alt="" />
+            </div>
+        </div>
+        <div class="container">
+            <div class="poketmon poke1">
+                <img src="./img/ev.png" alt="" />
+            </div>
+            <div class="poketmon poke2">
+                <img src="./img/jammanbo.png" alt="" />
+            </div>
+            <div class="poketmon poke3">
+                <img src="./img/mazayoung.png" alt="" />
+            </div>
+            <div class="poketmon poke4">
+                <img src="./img/mobugi.png" alt="" />
+            </div>
+            <div class="poketmon poke5">
+                <img src="./img/nyaong.png" alt="" />
+            </div>
+            <div class="poketmon poke6">
+                <img src="./img/pulin.png" alt="" />
+            </div>
+            <div class="poketmon poke7">
+                <img src="./img/weirdseed.png" alt="" />
+            </div>
+        </div>
+        <div class="container">
+            <div class="poketmon poke1">
+                <img src="./img/ev.png" alt="" />
+            </div>
+            <div class="poketmon poke2">
+                <img src="./img/jammanbo.png" alt="" />
+            </div>
+            <div class="poketmon poke3">
+                <img src="./img/mazayoung.png" alt="" />
+            </div>
+            <div class="poketmon poke4">
+                <img src="./img/mobugi.png" alt="" />
+            </div>
+            <div class="poketmon poke5">
+                <img src="./img/nyaong.png" alt="" />
+            </div>
+            <div class="poketmon poke6">
+                <img src="./img/pulin.png" alt="" />
+            </div>
+            <div class="poketmon poke7">
+                <img src="./img/weirdseed.png" alt="" />
+            </div>
+        </div>
+        <div class="container">
+            <div class="poketmon poke1">
+                <img src="./img/ev.png" alt="" />
+            </div>
+            <div class="poketmon poke2">
+                <img src="./img/jammanbo.png" alt="" />
+            </div>
+            <div class="poketmon poke3">
+                <img src="./img/mazayoung.png" alt="" />
+            </div>
+            <div class="poketmon poke4">
+                <img src="./img/mobugi.png" alt="" />
+            </div>
+            <div class="poketmon poke5">
+                <img src="./img/nyaong.png" alt="" />
+            </div>
+            <div class="poketmon poke6">
+                <img src="./img/pulin.png" alt="" />
+            </div>
+            <div class="poketmon poke7">
+                <img src="./img/weirdseed.png" alt="" />
+            </div>
+        </div>
+        <div class="container">
+            <div class="poketmon poke1">
+                <img src="./img/ev.png" alt="" />
+            </div>
+            <div class="poketmon poke2">
+                <img src="./img/jammanbo.png" alt="" />
+            </div>
+            <div class="poketmon poke3">
+                <img src="./img/mazayoung.png" alt="" />
+            </div>
+            <div class="poketmon poke4">
+                <img src="./img/mobugi.png" alt="" />
+            </div>
+            <div class="poketmon poke5">
+                <img src="./img/nyaong.png" alt="" />
+            </div>
+            <div class="poketmon poke6">
+                <img src="./img/pulin.png" alt="" />
+            </div>
+            <div class="poketmon poke7">
+                <img src="./img/weirdseed.png" alt="" />
+            </div>
+        </div>
+        <div class="container">
+            <div class="poketmon poke1">
+                <img src="./img/ev.png" alt="" />
+            </div>
+            <div class="poketmon poke2">
+                <img src="./img/jammanbo.png" alt="" />
+            </div>
+            <div class="poketmon poke3">
+                <img src="./img/mazayoung.png" alt="" />
+            </div>
+            <div class="poketmon poke4">
+                <img src="./img/mobugi.png" alt="" />
+            </div>
+            <div class="poketmon poke5">
+                <img src="./img/nyaong.png" alt="" />
+            </div>
+            <div class="poketmon poke6">
+                <img src="./img/pulin.png" alt="" />
+            </div>
+            <div class="poketmon poke7">
+                <img src="./img/weirdseed.png" alt="" />
+            </div>
+        </div>
+        <div class="container">
+            <div class="poketmon poke1">
+                <img src="./img/ev.png" alt="" />
+            </div>
+            <div class="poketmon poke2">
+                <img src="./img/jammanbo.png" alt="" />
+            </div>
+            <div class="poketmon poke3">
+                <img src="./img/mazayoung.png" alt="" />
+            </div>
+            <div class="poketmon poke4">
+                <img src="./img/mobugi.png" alt="" />
+            </div>
+            <div class="poketmon poke5">
+                <img src="./img/nyaong.png" alt="" />
+            </div>
+            <div class="poketmon poke6">
+                <img src="./img/pulin.png" alt="" />
+            </div>
+            <div class="poketmon poke7">
+                <img src="./img/weirdseed.png" alt="" />
+            </div>
+        </div>
+        <div class="container">
+            <div class="poketmon poke1">
+                <img src="./img/ev.png" alt="" />
+            </div>
+            <div class="poketmon poke2">
+                <img src="./img/jammanbo.png" alt="" />
+            </div>
+            <div class="poketmon poke3">
+                <img src="./img/mazayoung.png" alt="" />
+            </div>
+            <div class="poketmon poke4">
+                <img src="./img/mobugi.png" alt="" />
+            </div>
+            <div class="poketmon poke5">
+                <img src="./img/nyaong.png" alt="" />
+            </div>
+            <div class="poketmon poke6">
+                <img src="./img/pulin.png" alt="" />
+            </div>
+            <div class="poketmon poke7">
+                <img src="./img/weirdseed.png" alt="" />
+            </div>
+        </div>
+    </body>
+</html>
