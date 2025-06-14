@@ -32,19 +32,38 @@
             @keyframes headMove {
                 0%,
                 100% {
-                    transform: translateY(-10px);
+                    transform: translateY(-10px) translateX(-20px)
+                        rotateY(-1deg);
                 }
                 50% {
-                    transform: translateY(10px);
+                    transform: translateY(10px) translateX(10px);
                 }
             }
             @keyframes bodyMove {
                 0%,
                 100% {
-                    transform: scaleY(1.05);
+                    transform: scaleX(1.05) rotateY(0.5deg);
                 }
                 50% {
-                    transform: scaleY(1);
+                    transform: scaleX(0.95);
+                }
+            }
+            @keyframes legFrame {
+                0%,
+                100% {
+                    transform: scaleX(1.4);
+                }
+                50% {
+                    transform: scaleX(1);
+                }
+            }
+            @keyframes tail {
+                0%,
+                100% {
+                    transform: rotateZ(0deg) rotateY(40deg);
+                }
+                50% {
+                    transform: rotateZ(-20deg);
                 }
             }
 
@@ -69,8 +88,8 @@
                 width: 890px;
                 height: 468px;
                 position: relative;
-                animation: catBus_run 3s infinite
-                    cubic-bezier(0.075, 0.82, 0.165, 1);
+                animation: catBus_run 3s infinite ease-in-out;
+                perspective: 100px;
             }
             /* --머리-- */
             .head {
@@ -80,8 +99,7 @@
                 top: 66px;
                 left: 20px;
                 z-index: 1;
-                animation: headMove 1s cubic-bezier(0.075, 0.82, 0.165, 1)
-                    infinite;
+                animation: headMove 1.3s ease-in-out infinite;
             }
             .leftEar {
                 width: 122px;
@@ -235,7 +253,7 @@
                 height: 339px;
                 top: 53px;
                 left: 248px;
-                animation: bodyMove 1s infinite;
+                animation: bodyMove 1s infinite ease-in-out;
                 position: absolute;
                 border-radius: 124px;
                 overflow: hidden;
@@ -285,14 +303,16 @@
                 left: 300px;
                 position: absolute;
                 display: flex;
+                animation: legFrame 1s infinite;
+                position: absolute;
+                border-radius: 124px;
             }
             .runLeg {
                 width: 90px;
                 height: 118px;
                 margin-top: 100px;
                 border-radius: 55px 55px 30px 30px;
-
-                animation: runingLeg 0.5s linear infinite;
+                animation: runingLeg 1s linear infinite;
                 position: relative;
                 overflow: hidden;
             }
@@ -347,6 +367,31 @@
             .legTiming {
                 --i: 5;
                 animation-delay: calc(100ms * var(--i));
+            }
+            .catTail {
+                width: 397px;
+                height: 106px;
+                display: flex;
+            }
+            .tail {
+                width: 397px;
+                height: 106px;
+                top: 231px;
+                left: 770px;
+                z-index: -1;
+                overflow: hidden;
+                display: flex;
+                justify-content: space-between;
+                transform-origin: left center;
+                animation: tail 1s infinite ease-in-out;
+            }
+            .tailStripe_small {
+                width: 50px;
+                height: 126px;
+            }
+            .tailStripe_large {
+                width: 132px;
+                height: 126px;
             }
         </style>
     </head>
@@ -486,6 +531,14 @@
                 </div>
             </div>
             <!-- --------다리 끝---------- -->
+            <div class="catTail">
+                <div class="tail round absolute body-color">
+                    <div class="tailStripe_small stripe-color"></div>
+                    <div class="tailStripe_small stripe-color"></div>
+                    <div class="tailStripe_small stripe-color"></div>
+                    <div class="tailStripe_large stripe-color"></div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
