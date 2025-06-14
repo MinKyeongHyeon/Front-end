@@ -98,8 +98,8 @@
                 position: absolute;
                 top: 66px;
                 left: 20px;
-                z-index: 1;
-                animation: headMove 1.3s ease-in-out infinite;
+                z-index: 3;
+                animation: headMove 1s ease-in-out infinite;
             }
             .leftEar {
                 width: 122px;
@@ -278,6 +278,7 @@
                 left: 65px;
                 display: flex;
                 justify-content: space-between;
+                animation: bodyMove 1s infinite ease-in-out;
             }
             .windowBlue {
                 width: 68px;
@@ -392,18 +393,77 @@
                 width: 132px;
                 height: 126px;
             }
+            .rat {
+                width: 340px;
+                height: 19px;
+                top: 63px;
+                left: 287px;
+                z-index: 1;
+                animation: bodyMove 1s infinite ease-in-out;
+            }
+            .ratHead {
+                width: 32px;
+                height: 19px;
+
+                background-color: #787878;
+            }
+            .ratNose {
+                width: 6px;
+                height: 5px;
+                background-color: red;
+                top: 5px;
+                right: 28px;
+            }
+            .ratEyeL {
+                width: 3px;
+                height: 8px;
+                background-color: #ff9fea;
+                top: 1px;
+                left: 10px;
+            }
+            .ratEyeR {
+                width: 6px;
+                height: 9px;
+                background-color: #ff9fea;
+                top: 1px;
+                left: 17px;
+            }
+            .ratEarL {
+                width: 18px;
+                height: 20px;
+                background-color: #626a6a;
+                z-index: -2;
+                bottom: 12px;
+                left: 10px;
+            }
+            .ratEarR {
+                width: 18px;
+                height: 20px;
+                background-color: #626a6a;
+                bottom: 12px;
+                left: 23px;
+            }
+            .ratBody {
+                width: 65px;
+                height: 32px;
+                background-color: #787878;
+                left: 16px;
+                bottom: 0px;
+                z-index: -1;
+            }
         </style>
     </head>
     <body>
+        <!-- ---고양이버스--- -->
         <div class="catBus">
-            <!-- ----머리---- -->
+            <!-- ---머리--- -->
             <div class="head">
-                <!-- -------귀------- -->
+                <!-- ---귀--- -->
                 <div class="ear">
                     <div class="leftEar stripe-color round absolute"></div>
                     <div class="rightEar stripe-color round absolute"></div>
                 </div>
-                <!-- ------얼굴------ -->
+                <!-- ---얼굴--- -->
                 <div class="face round body-color">
                     ------머리위쪽------
                     <div class="face-top round stripe-color absolute"></div>
@@ -457,7 +517,7 @@
                 <!-- ------얼굴끝----- -->
             </div>
             <!-- -------머리끝--------- -->
-            <!-- ---------몸통----------- -->
+            <!-- ---몸통--- -->
             <div class="catBody body-color">
                 <!-- ----------창문 앞쪽----------- -->
                 <div class="windows absolute">
@@ -476,7 +536,7 @@
                 <div class="bodyStripe-top stripe-color absolute"></div>
                 <div class="bodyStripe-bottom stripe-color absolute"></div>
             </div>
-            <!-- ---------다리--------- -->
+            <!-- ---다리--- -->
             <div class="catLeg">
                 <div class="runLeg legTiming" style="--i: 0">
                     <div class="leg">
@@ -530,12 +590,26 @@
                 </div>
             </div>
             <!-- --------다리 끝---------- -->
+            <!-- ---꼬리--- -->
             <div class="catTail">
                 <div class="tail round absolute body-color">
                     <div class="tailStripe_small stripe-color"></div>
                     <div class="tailStripe_small stripe-color"></div>
                     <div class="tailStripe_small stripe-color"></div>
                     <div class="tailStripe_large stripe-color"></div>
+                </div>
+            </div>
+            <!-- --------꼬리 끝 -------- -->
+            <!-- ---쥐--- -->
+
+            <div class="rat absolute">
+                <div class="ratHead round absolute">
+                    <div class="ratEyeL round absolute"></div>
+                    <div class="ratEyeR round absolute"></div>
+                    <div class="ratNose round absolute"></div>
+                    <div class="ratEarL round absolute"></div>
+                    <div class="ratEarR round absolute"></div>
+                    <div class="ratBody round absolute"></div>
                 </div>
             </div>
         </div>
