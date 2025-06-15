@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>background</title>
+    <style>
+      .grassBox {
+        width: 179px;
+        height: 180px;
+        border: 1px solid black;
+      }
+      .grass {
+        width: 123px;
+        height: 14px;
+        background-color: #bfdabc;
+      }
+      .grass1 {
+        top: 13px;
+        left: 9px;
+      }
+      .grass2 {
+        top: 52px;
+        left: 42px;
+      }
+      .grass3 {
+        top: 90px;
+        left: 0px;
+      }
+      .grass4 {
+        top: 114px;
+        left: 48px;
+      }
+      .grass5 {
+        top: 138px;
+        left: 62px;
+      }
+      .grass6 {
+        top: 152px;
+        left: 9px;
+      }
+      .tree {
+        width: 204px;
+        height: 308px;
+        border: 1px solid black;
+      }
+
+      .round {
+        border-radius: 50%;
+      }
+      .absolute {
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background">
+      <div class="sky"></div>
+      <div class="ground">
+        <div class="tree">
+          <div class="log">
+            <div class="leaf"></div>
+            <div class="leaf"></div>
+          </div>
+        </div>
+        <div class="grassBox">
+          <div class="grass round absolute grass1"></div>
+          <div class="grass round absolute grass2"></div>
+          <div class="grass round absolute grass3"></div>
+          <div class="grass round absolute grass4"></div>
+          <div class="grass round absolute grass5"></div>
+          <div class="grass round absolute grass6"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
