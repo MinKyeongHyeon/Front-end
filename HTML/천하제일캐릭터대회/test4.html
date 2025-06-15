@@ -6,10 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>background</title>
     <style>
+      @keyframes grass {
+        from {
+          transform: rotateZ(-15deg);
+        }
+        to {
+          transform: rotateZ(15deg);
+        }
+      }
+      .background {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+      }
+      .sky {
+        width: 100vw;
+        height: 100vh;
+        background-color: #5f95d3;
+      }
+      .groundGrass {
+        width: 300vw;
+        height: 100vh;
+        background-color: #447e3f;
+        top: 70vh;
+        left: -100vw;
+      }
+      .groundBox {
+        width: 100px;
+        height: 100px;
+        top: 2070vh;
+        left: 50vw;
+        animation: grass 10s infinite linear;
+      }
+      .groundBox2 {
+        width: 100px;
+        height: 100px;
+        top: 2070vh;
+        left: 50vw;
+        animation: grass 8s infinite linear;
+      }
+      .groundBox3 {
+        width: 100px;
+        height: 100px;
+        top: 2070vh;
+        left: 50vw;
+        animation: grass 5s infinite linear;
+      }
       .grassBox {
         width: 179px;
         height: 180px;
-        border: 1px solid black;
+
+        transform-origin: center bottom;
+        bottom: 1985vh;
       }
       .grass {
         width: 123px;
@@ -43,7 +92,26 @@
       .tree {
         width: 204px;
         height: 308px;
-        border: 1px solid black;
+
+        bottom: 2000vh;
+        z-index: 1;
+      }
+      .log {
+        width: 58px;
+        height: 91px;
+        background-color: #745d43;
+        top: 217px;
+        left: 75px;
+      }
+      .leaf {
+        width: 201px;
+        height: 146px;
+        background-color: #6e8943;
+        top: 0px;
+        left: 0px;
+      }
+      .leaf1 {
+        top: 105px;
       }
 
       .round {
@@ -55,22 +123,54 @@
     </style>
   </head>
   <body>
-    <div class="background">
-      <div class="sky"></div>
-      <div class="ground">
-        <div class="tree">
-          <div class="log">
-            <div class="leaf"></div>
-            <div class="leaf"></div>
+    <div class="background absolute">
+      <div class="sky absolute"></div>
+      <div class="ground absolute">
+        <div class="groundGrass round absolute"></div>
+        <div class="groundBox round absolute">
+          <div class="tree absolute">
+            <div class="log absolute"></div>
+            <div class="leaf absolute round"></div>
+            <div class="leaf absolute round leaf1"></div>
+          </div>
+          <div class="grassBox absolute">
+            <div class="grass round absolute grass1"></div>
+            <div class="grass round absolute grass2"></div>
+            <div class="grass round absolute grass3"></div>
+            <div class="grass round absolute grass4"></div>
+            <div class="grass round absolute grass5"></div>
+            <div class="grass round absolute grass6"></div>
           </div>
         </div>
-        <div class="grassBox">
-          <div class="grass round absolute grass1"></div>
-          <div class="grass round absolute grass2"></div>
-          <div class="grass round absolute grass3"></div>
-          <div class="grass round absolute grass4"></div>
-          <div class="grass round absolute grass5"></div>
-          <div class="grass round absolute grass6"></div>
+        <div class="groundBox2 round absolute">
+          <div class="tree absolute">
+            <div class="log absolute"></div>
+            <div class="leaf absolute round"></div>
+            <div class="leaf absolute round leaf1"></div>
+          </div>
+          <div class="grassBox absolute">
+            <div class="grass round absolute grass1"></div>
+            <div class="grass round absolute grass2"></div>
+            <div class="grass round absolute grass3"></div>
+            <div class="grass round absolute grass4"></div>
+            <div class="grass round absolute grass5"></div>
+            <div class="grass round absolute grass6"></div>
+          </div>
+        </div>
+        <div class="groundBox3 round absolute">
+          <div class="tree absolute">
+            <div class="log absolute"></div>
+            <div class="leaf absolute round"></div>
+            <div class="leaf absolute round leaf1"></div>
+          </div>
+          <div class="grassBox absolute">
+            <div class="grass round absolute grass1"></div>
+            <div class="grass round absolute grass2"></div>
+            <div class="grass round absolute grass3"></div>
+            <div class="grass round absolute grass4"></div>
+            <div class="grass round absolute grass5"></div>
+            <div class="grass round absolute grass6"></div>
+          </div>
         </div>
       </div>
     </div>
