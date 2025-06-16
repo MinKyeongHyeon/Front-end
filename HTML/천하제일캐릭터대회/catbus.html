@@ -67,20 +67,21 @@
       }
       @keyframes grass {
         from {
-          transform: rotateZ(-15deg);
+          transform: rotateZ(-15deg) rotateX(18deg);
         }
         to {
-          transform: rotateZ(15deg);
+          transform: rotateZ(15deg) rotateX(-18deg);
         }
       }
       @keyframes cloud {
         from {
-          transform: translate(-300vw);
+          transform: translate(-300vw) rotate(2deg);
         }
         to {
-          transform: translate(300vw);
+          transform: translate(300vw) rotate(-4deg);
         }
       }
+
       body {
         margin: 0;
         padding: 0;
@@ -170,6 +171,7 @@
         width: 123px;
         height: 14px;
         background-color: #bfdabc;
+        animation: bodyMove 0.1s infinite linear;
       }
       .grass1 {
         top: 13px;
@@ -198,9 +200,9 @@
       .tree {
         width: 204px;
         height: 308px;
-
         bottom: 2000vh;
         z-index: 1;
+        animation: bodyMove 0.1s infinite linear;
       }
       .log {
         width: 58px;
