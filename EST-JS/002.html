@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Javascript Console</h1>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Javascript</li>
+      <li>SCSS</li>
+    </ul>
+    <script>
+      // 변수를 선언하는 방법 3가지 - var, let, const
+      const li = document.getElementsByTagName('li');
+
+      // head에 스크립트를 작성하면 불러올 수 없음. 순서가 중요하기 때문
+      // 브라우저에서 첫 콘솔로그는 Javascript로 나오지만 두 번째 콘솔로그에는 한글로 '자바스크립트'로 나옴
+      console.log(li[2].textContent);
+      li[2].textContent = '자바스크립트<button>버튼</button>';
+
+      console.log(li[2].textContent);
+      li[2].innerHTML = '자바스크립트<button>버튼</button>';
+    </script>
+  </body>
+</html>

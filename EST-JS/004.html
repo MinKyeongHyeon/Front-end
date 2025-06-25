@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EmCalc</title>
+  </head>
+  <body>
+    <input type="number" id="targetPx" placeholder="계산할 px값을 넣으셈~" />
+    <button type="button" onclick="pxToEm()">EM계산하기</button>
+    <script>
+      const input = document.getElementById('targetPx');
+      console.log(input);
+      function pxToEm() {
+        console.log('입력된 값은:', input.value);
+        const target = +input.value;
+        console.log(typeof target);
+        const em = target / 16;
+        console.log(`${target}px은 ${em}em 이지롱~`);
+      }
+    </script>
+  </body>
+</html>
