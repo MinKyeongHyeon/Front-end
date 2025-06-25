@@ -55,7 +55,7 @@ function sum3(a, b) {
   console.log(`${a} / ${b} = ${res2}`);
 }
 sum3(10, 20);
-
+//함수 없이 작성
 const a1 = 20;
 const b1 = 50;
 const multi = a1 * b1;
