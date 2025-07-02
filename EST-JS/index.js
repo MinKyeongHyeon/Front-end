@@ -1,24 +1,5 @@
-//friend1, friend2, friend3
-// name, age, mbti
+const { name, age, skills = 'No skills' } = user1;
+console.log(name, age, skills);
 
-const friend1 = { name: 'zeezee', age: 1000, mbti: 'ENTP' };
-const friend2 = { name: 'soulgom', age: 100, mbti: 'ENFJ' };
-const friend3 = { name: 'binky', age: 33, mbti: 'ISTJ' };
-
-const friends = [friend1, friend2, friend3];
-console.log(friends);
-
-const drinkMenu = {
-  americano: 3500,
-  latte: 5000,
-};
-const cupSize = {
-  small: 0,
-  medium: 1000,
-  large: 2000,
-};
-const orderMenu = 'americano';
-const orderCount = 3;
-const orderSize = 'large';
-
-console.log((drinkMenu[orderMenu] + cupSize[orderSize]) * orderCount);
+const { name: newName, age: newAge, skills: newSkills = 'No skills' } = user2;
+console.log(newName, newAge, newSkills);
