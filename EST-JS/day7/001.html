@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./dom/css/dom.css" />
+  </head>
+  <body>
+    <div class="all-container">
+      <div class="menu-container">
+        <button class="btn">
+          <img src="./dom/images/irangi_01.png" alt="irangi" />
+        </button>
+        <button class="btn">
+          <img src="./dom/images/irangi_02.png" alt="irangi" />
+        </button>
+        <button class="btn">
+          <img src="./dom/images/irangi_03.png" alt="irangi" />
+        </button>
+      </div>
+    </div>
+    <ul id="list">
+      <li>apple</li>
+      <li>mango</li>
+      <li>banana</li>
+    </ul>
+    <!-- ul 에 클릭이벤트를 추가하여, 현재 클릭된 요소의 컨텐츠가 콘솔에 찍히도록 처리해보세요 -->
+
+    <p id="p">
+      hello world
+      <span>SPAN</span>
+      <strong>STRONG</strong>
+    </p>
+
+    <div id="testBox">
+      <strong>STRONG</strong>
+      <em>EM</em>
+      <p>Paragraph</p>
+    </div>
+    <script>
+      const menu = document.querySelector('.menu-container');
+
+      menu.addEventListener('click', e => {
+        // console.log('target :', event.target);
+        // console.log('cTarget :', event.currentTarget);// this는 오류가 날 때도 있음 이걸쓰자.
+        // console.log('this :', this);
+        console.log(e.target.nodeName);
+        if (e.target.nodeName === 'BUTTON') {
+          const contents = e.target.innerHTML;
+          alert(contents);
+        }
+      });
+      function menuHandler(e) {
+        if (e.target.nodeName === 'BUTTON') {
+          const contents = e.target.innerHTML;
+          alert(contents);
+        }
+      }
+      // menu.addEventListener('click, menuHandler');
+
+      const list = document.getElementById('list');
+      list.addEventListener('click', e => {
+        if (e.target.nodeName === 'LI') {
+          const content = e.target.textContent;
+          console.log(content);
+        }
+      });
+
+      const p = document.getElementById('p');
+      // const p = document.querySelector('#p')
+      function doSomething(e) {
+        const isTarget = e / target.nodeName === 'STRONG';
+        console.log("That's Strong");
+      }
+      p.addEventListener('click', doSomething);
+
+      const testBox = document.getElementById('testBox');
+      testBox.addEventListener('click', e => {
+        if (e.target.nodeName === 'EM') {
+          console.log('클릭');
+        }
+      });
+    </script>
+  </body>
+</html>
