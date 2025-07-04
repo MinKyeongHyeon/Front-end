@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        max-width: 600px;
+        border: 1px solid #d8d8d8;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 50px auto;
+        position: relative;
+      }
+      img {
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        left: 30px;
+        bottom: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>paragraph<span>SPAN</span></p>
+    <div class="container">
+      <img src="./images/irangi_06.png" alt="아뵤오~" />
+    </div>
+    <script>
+      const img = document.querySelector('.container img');
+      const imgBox = img.getBoundingClientRect();
+      console.log(imgBox);
+      const distance = 10;
+      let url = '';
+      console.log(`img WIDTH: ${imgBox.width}`);
+      window.addEventListener('keydown', e => {
+        if (e.code === 'ArrowRight') {
+          url = 'ArrowRight';
+          img.style.left = `${imgBox.offsetLeft + distance}px`;
+        }else if(e.code === 'ArrowLeft') {
+          url = 'ArrowLeft';
+          img.style.left = `${imgBox.offsetLeft - distance}px`;
+      });
+    </script>
+  </body>
+</html>
