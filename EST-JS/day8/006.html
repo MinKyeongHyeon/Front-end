@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="box" id="parent">
+    <p>First child</p>
+    <button name="btn">클릭하세요</button>
+    <p>Third child</p>
+
+  </div>
+  <script>
+    const parent = document.getElementById('parent');
+    parent.addEventListener('click', e=>{
+      const target = e.target;
+      output.textContent =`
+      부모 : ${target.parentElement},
+      첫 번째 자식요소 : ${target.firstElementChild},
+      다음 형제 : ${target.nextElementSibling},
+      이전 형제 : ${target.previousElementSibling},
+      가장 가까운 div 요소 : ${target.closest('div')}
+      `
+    })
+  </script>
+</body>
+</html>

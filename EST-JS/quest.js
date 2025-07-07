@@ -1,10 +1,7 @@
-function solution(n) {
-  let result = [];
-  for (let i = 1; i <= n; i++) {
-    if (i % 2 === 1) {
-      result.push(i);
-    }
-  }
-  return result;
+let array = [1, 2, 2, 3, 3, 3, 4, 5];
+function solution(array) {
+  array.map((a, b) => {
+    a === a + 1 ? b++ : b;
+  });
 }
-console.log(solution(10));
+console.log(solution(array));
