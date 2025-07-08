@@ -34,3 +34,14 @@ people.forEach(a => a.introduce())
 // 5. 클로저
 // 이름, 나이, 비밀번호를 받아 SecretPerson을 만들고, 
 // checkPassword로만 비밀번호를 확인할 수 있게 하세요.
+function SecretPerson(name, age, password) {
+    this.name = name;
+    this.age = age;
+    let _password = password;
+    this.checkPassword = function(input) {
+        return input === _password;
+    }
+}
+const sPerson = new SecretPerson('빙키',20,'1234')
+
+console.log(sPerson.checkPassword('1234'))
