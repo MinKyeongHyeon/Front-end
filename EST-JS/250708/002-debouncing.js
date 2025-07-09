@@ -36,9 +36,10 @@ document.getElementById('button').addEventListener('click', throttledClick);
 
 // 입력이 멈춘 후에! func 실행
 // => 마지막 입력으로부터 delay 시간이 지나야 실행이 된다!
+
 function debounce(func, delay) {
   let timer; // 타이머 ID를 저장하는 변수 => 타이머 취소할 때 사용!
-
+  console.log(timer);
   // args: 인자들이 담긴 배열
   return function (...args) {
     // 1. 기존 타이머 취소
