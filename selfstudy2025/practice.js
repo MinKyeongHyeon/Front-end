@@ -31,10 +31,10 @@ const bookGenre = {};
 parsedBookList.forEach(book => {
   const newGenre = book.genre;
   const newTitle = book.title;
-  console.log('장르는: ', newGenre, '제목은: ', newTitle);
+  // console.log('장르는: ', newGenre, '제목은: ', newTitle);
   // 장르를 배열에 넣고, 배열에 장르가 같으면 푸쉬?
   // 장르 [제목, 제목, 제목] <= 이게 원하는 정답 ?
-  console.log('배열', bookGenre[newGenre]); //배열이 없으면 undefined
+  // console.log('배열', bookGenre[newGenre]); //배열이 없으면 undefined
   if (bookGenre[newGenre] === undefined) {
     bookGenre[newGenre] = [];
   }
