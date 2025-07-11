@@ -94,4 +94,4 @@ async function deleteProduct(productId) {
     console.error('삭제 중 오류', error);
   }
 }
-deleteProduct(99);
+deleteProduct(2);

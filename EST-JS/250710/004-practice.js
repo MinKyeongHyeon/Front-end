@@ -72,3 +72,8 @@ async function createProduct2() {
   }
 }
 createProduct2();
+
+/*
+- Promise 체이닝이 복잡해질때
+- 
+*/

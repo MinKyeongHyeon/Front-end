@@ -86,3 +86,17 @@ console.log([...setB]);
 console.log([...setA, ...setB]);
 
 const setC = new Set([...setA, ...setB]);
+
+async function message() {
+    console.log("1");
+    const hello = await new Promise((resolve) => {
+        console.log("2");
+        setTimeout(() => {
+            console.log("3");
+            resolve("hello");
+        }, 1000);
+    });
+    console.log("4", hello);
+}
+message();
+console.log("5");
