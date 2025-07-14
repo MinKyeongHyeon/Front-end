@@ -41,7 +41,7 @@ function renderMemo() {
   memoList.innerHTML = '';
   // 메모가 없으면 "작성된 메모가 없습니다" 메시지 출력
   if (memoData.length === 0) {
-    memoList.innerHTML = `<li>작성된 메모가 없수다.</li>`;
+    memoList.innerHTML = `<li>어이!,작성된 메모가 없수다.</li>`;
     return;
   }
   // 메모가 있으면 반복문으로 각 메모를 화면에 출력
@@ -60,7 +60,7 @@ function renderMemo() {
   const memoNum = document.getElementsByClassName('index').value;
   const delbtn = document.getElementById('delbtn');
   delbtn.addEventListener('click', () => {
-    deleteMemo(memoNum);
+    deleteMemo(Number(memoNum));
     renderMemo();
   });
 }
