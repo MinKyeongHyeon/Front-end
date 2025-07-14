@@ -81,7 +81,7 @@ memoForm.addEventListener('submit', e => {
   const content = contentInput.value.trim();
 
   // 제목이 비어있으면 경고 메시지
-  if (title === '') {
+  if (!title) {
     alert('어이, 정신 촐리라이! 무사 제목이 어서?');
     return;
   }
