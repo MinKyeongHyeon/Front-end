@@ -1,0 +1,23 @@
+@function responsive-grid($col, $device: 'desktop') {
+  @if $device == 'mobile' {
+    @if $col > 6 {
+      @return 100%;
+    }
+    @if $col > 3 {
+      @return 50%;
+    }
+  }
+  @return percentage($col / 12);
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: responsive-grid($i);
+
+    float: left;
+
+    @media (max-width: 768px) {
+      width: responsive-grid($i, 'mobile');
+    }
+  }
+}
