@@ -1,6 +1,6 @@
-import { createContext, useState } from "react";
-
-export const LanguageContext = createContext();
+import { createContext, useContext, useState } from "react";
+// 수정(import)
+import useLocalStorage from "./Hook/useLocalStorage";
 
 const languages = {
   en: {
@@ -23,15 +23,23 @@ const languages = {
   },
 };
 
-export function LanguageProvider({ children }) {
-  const [language, setLanguage] = useState("ko");
-  const currentLanguage = languages[language];
+const LanguageContext = createContext();
 
+function LanguageProvider({ children }) {
+  // 수정(아래 2줄)
+  const { myLang } = useLocalStorage();
+  const [languageState, setLanguageState] = useState(myLang);
+
+  const changeLanguage = (lang) => {
+    setLanguageState(lang);
+  };
   return (
     <LanguageContext.Provider
-      value={{ currentLanguage, language, setLanguage }}
+      value={{ languageState, changeLanguage, languages }}
     >
       {children}
     </LanguageContext.Provider>
   );
 }
+
+export { LanguageProvider, LanguageContext };

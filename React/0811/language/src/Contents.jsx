@@ -1,14 +1,12 @@
-import useLang from "./custom-hook/UseLang";
+import useLang from "./Hook/useLang";
 
-function Contents() {
-  const { currentLanguage } = useLang();
-  const { greeting, description } = currentLanguage;
+export default function Contents() {
+  const { languageData } = useLang();
   return (
-    <div>
-      <p>{greeting}</p>
-      <p>{description}</p>
-    </div>
+    <>
+      <h3>{languageData.title}</h3>
+      <p>{languageData.greeting}</p>
+      <p>{languageData.description}</p>
+    </>
   );
 }
-
-export default Contents;
