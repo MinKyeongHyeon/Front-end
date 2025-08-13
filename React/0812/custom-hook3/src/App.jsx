@@ -1,24 +1,16 @@
-import { useMouseLocation } from "./Hooks/useMouseLocation";
-import { useScrollThrottle } from "./Hooks/useScrollThrottle"; // 추가
-import { useScroll } from "./Hooks/useScroll";
+import ImageList from "./ImageList";
 
 function App() {
-  const mouseLocation = useMouseLocation({ x: 0, y: 0 });
-  // console.log(mouseLocation);
-  const isBottom = useScroll();
-  const isBottomThrottle = useScrollThrottle(200); // 200ms마다 한 번만 체크
-
   return (
-    <div style={{ backgroundColor: "blue", height: "1000px" }}>
-      <div style={{ color: "white", padding: 16 }}>
-        <div>
-          마우스 위치: {mouseLocation.x}, {mouseLocation.y}
-        </div>
-        <div>일반 스크롤 하단 도달: {isBottom ? "YES" : "NO"}</div>
-        <div>쓰로틀 스크롤 하단 도달: {isBottomThrottle ? "YES" : "NO"}</div>
-      </div>
-    </div>
+    <>
+      <ImageList />
+    </>
   );
 }
 
 export default App;
+
+// picsum api 사용 (https://picsum.photos/v2/list?page=2&limit=100)
+// 최초 렌더링시 5개의 사진 리스트 출력
+// 스크롤해서 하단에 닿았을때 추가적인 사진 데이터 호출
+// useScrollObserver 커스텀 훅 활용

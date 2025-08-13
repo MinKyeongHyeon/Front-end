@@ -1,29 +1,39 @@
 import { useState, useEffect, useRef } from "react";
 
 export function useScrollThrottle() {
-  const [isBottom, setIsBottom] = useState(false);
-  const throttleTimeout = useRef(null);
+  const [isBottom, setIsBottom] = useState();
+  const timer = useRef(null);
 
   useEffect(() => {
-    function handleScroll() {
-      if (throttleTimeout.current) return;
-
-      console.log("쓰~로틀~스크롤~~링");
-
-      throttleTimeout.current = setTimeout(() => {
-        setIsBottom(
-          window.innerHeight + document.documentElement.scrollTop + 10 >=
-            document.documentElement.offsetHeight
-        );
-        throttleTimeout.current = null;
-      }, 200);
+    function throttle(callback, delay) {
+      return () => {
+        if (timer.current === null) {
+          timer.current = setTimeout(() => {
+            callback();
+            timer.current = null;
+          }, delay);
+        }
+      };
     }
 
-    window.addEventListener("scroll", handleScroll);
+    const handleScroll = () => {
+      setIsBottom(
+        window.innerHeight + document.documentElement.scrollTop + 10 >=
+          document.documentElement.offsetHeight
+      );
+      console.log("scrollEvent", setIsBottom);
+    };
+
+    const throttleHandler = throttle(handleScroll, 2000);
+    // window.addEventListener("scroll", () => {
+    //     setIsBottom(window.innerHeight + document.documentElement.scrollTop + 10 >= document.documentElement.offsetHeight);
+    //     console.log("scrolling...");
+    // });
+
+    window.addEventListener("scroll", throttleHandler);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-      if (throttleTimeout.current) clearTimeout(throttleTimeout.current);
+      window.removeEventListener("scroll", throttleHandler);
     };
   }, []);
 
