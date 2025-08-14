@@ -1,4 +1,5 @@
 import ImageList from "./ImageList";
+import "./App.css";
 
 function App() {
   return (

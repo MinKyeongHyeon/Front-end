@@ -5,7 +5,6 @@ function ImageList() {
   const [images, setImages] = useState([]);
   const isBottom = useScrollObserver();
   const [page, setPage] = useState(1);
-  //로딩안끝났는데 자꾸 isBottom 호출해서 로딩 추가
   const [isLoading, setIsLoading] = useState(false);
 
   async function fetchImages(pageNum, isFirst = true) {
@@ -14,16 +13,10 @@ function ImageList() {
       const response = await fetch(
         `https://picsum.photos/v2/list?page=${pageNum}&limit=5`
       );
-      if (!response.ok) {
-        throw new Error("으악! 으악!");
-      }
-
+      if (!response.ok) throw new Error("으악! 으악!");
       const data = await response.json();
-      if (isFirst) {
-        setImages(data);
-      } else {
-        setImages((prev) => [...prev, ...data]);
-      }
+      if (isFirst) setImages(data);
+      else setImages((prev) => [...prev, ...data]);
     } catch (error) {
       console.error("으아악 오류발생", error);
     } finally {
@@ -36,7 +29,24 @@ function ImageList() {
       setPage((prev) => prev + 1);
       fetchImages(page, false);
     }
-  }, [isBottom]);
+  }, [isBottom, isLoading, page]);
+
+  // 카드에 옵저버 등록 (이미지가 바뀔 때마다)
+  useEffect(() => {
+    const cards = document.getElementsByClassName("card");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) =>
+        entry.target.classList.toggle("show", entry.isIntersecting)
+      );
+    });
+    Array.from(cards).forEach((card) => observer.observe(card));
+
+    // 정리(clean-up)
+    return () => {
+      Array.from(cards).forEach((card) => observer.unobserve(card));
+      observer.disconnect();
+    };
+  }, [images]);
 
   return (
     <>
