@@ -1,6 +1,6 @@
 .card {
   transition: all 1s;
-  transform: translateX(300px); /* 처음엔 오른쪽에 위치 */
+  transform: translateX(100vw); /* 처음엔 오른쪽에 위치 */
 }
 
 .card.show {
