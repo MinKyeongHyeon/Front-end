@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fascinate&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100..800&family=Fascinate&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.1/redux.js"></script>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Noto Sans KR", Arial, sans-serif;
+      }
+
+      header {
+        margin: 16px 0 0 0;
+      }
+
+      nav {
+        display: flex;
+        gap: 8px;
+        padding: 8px;
+      }
+
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 16px;
+      }
+
+      .container {
+        border: 4px solid #222;
+        padding: 16px;
+        background: #fff;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 24px;
+        width: 90vw;
+        box-sizing: border-box;
+      }
+
+      .box {
+        border: 4px solid #e07a5f;
+        background: #fff;
+        min-height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: #222;
+        font-weight: 400;
+        transition: all 0.2s;
+      }
+
+      input[type="text"] {
+        padding: 4px 8px;
+        font-size: 1rem;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+      }
+
+      button {
+        padding: 4px 12px;
+        font-size: 1rem;
+        border-radius: 4px;
+        border: 1px solid #888;
+        background: #f7f7f7;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .rounded {
+        border-radius: 10px;
+      }
+      .circle {
+        border-radius: 50%;
+      }
+      .rect {
+        border-radius: 0;
+      }
+      .red {
+        border: 4px solid red;
+      }
+      .green {
+        border: 4px solid green;
+      }
+      .blue {
+        border: 4px solid blue;
+      }
+
+      .font-noto {
+        font-family: "Noto Sans KR", Arial, sans-serif;
+      }
+      .font-roboto {
+        font-family: "Roboto", Arial, sans-serif;
+      }
+      .font-fascinate {
+        font-family: "Fascinate", cursive;
+      }
+      .font-anek {
+        font-family: "Anek Malayalam", sans-serif;
+      }
+      .font-noto-sans {
+        font-family: "Noto Sans", Arial, sans-serif;
+      }
+      .font-arial {
+        font-family: "Arial Black", Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <label for="input" aria-readonly="텍스트 입력"></label>
+        <input id="input" type="text" />
+        <button type="button" id="click">Click Me!</button>
+        <button type="button" id="round">Rounded</button>
+        <button type="button" id="circle">Circle!</button>
+        <button type="button" id="rect">Rect!</button>
+        <button type="button" id="red">Red!</button>
+        <button type="button" id="green">Green</button>
+        <button type="button" id="blue">Blue</button>
+        <button type="button" id="reset">Reset</button>
+      </nav>
+    </header>
+    <main>
+      <section class="container">
+        <article class="box font-noto" id="1">hello!</article>
+        <article class="box font-roboto" id="2">hello!</article>
+        <article class="box font-fascinate" id="3">hello!</article>
+        <article class="box font-anek" id="4">hello!</article>
+        <article class="box font-noto-sans" id="5">hello!</article>
+        <article class="box font-arial" id="6">hello!</article>
+      </section>
+    </main>
+    <script>
+      const reducer = (state, action) => {
+        if (state === undefined) {
+          const initialState = { text: "hello!", shape: "", color: "" };
+          console.log("🌟 초기 상태 설정:", initialState);
+          return initialState;
+        }
+        switch (action.type) {
+          case "CHANGE_TEXT":
+            return { ...state, text: action.text || "hello!" };
+          case "CHANGE_SHAPE":
+            return { ...state, shape: action.shape };
+          case "CHANGE_COLOR":
+            return { ...state, color: action.color };
+          case "RESET":
+            return { ...state, text: "hello!", shape: "", color: "" };
+          default:
+            return state;
+        }
+      };
+      const store = Redux.createStore(
+        reducer,
+        // Redux DevTools Extension 연동 (브라우저 확장 프로그램)
+        // 개발 중에만 사용, 프로덕션에서는 제거 권장
+        window.__REDUX_DEVTOOLS_EXTENSION__ &&
+          window.__REDUX_DEVTOOLS_EXTENSION__()
+      );
+      const changeTextAction = (text) => {
+        return {
+          type: "CHANGE_TEXT",
+          text: text,
+        };
+      };
+
+      const changeShapeAction = (shape) => {
+        return {
+          type: "CHANGE_SHAPE",
+          shape: shape,
+        };
+      };
+      const changeColorAction = (color) => {
+        return {
+          type: "CHANGE_COLOR",
+          color: color,
+        };
+      };
+      const box = document.querySelectorAll(".box");
+
+      function render() {
+        const state = store.getState();
+        box.forEach((b) => {
+          b.textContent = state.text;
+          b.classList.remove(
+            "rounded",
+            "circle",
+            "rect",
+            "red",
+            "green",
+            "blue"
+          );
+          if (state.shape) b.classList.add(state.shape);
+          if (state.color) b.classList.add(state.color);
+        });
+      }
+
+      store.subscribe(render);
+
+      const input = document.querySelector("#input");
+      const click = document.querySelector("#click");
+      const round = document.querySelector("#round");
+      const circle = document.querySelector("#circle");
+      const rect = document.querySelector("#rect");
+      const red = document.querySelector("#red");
+      const green = document.querySelector("#green");
+      const blue = document.querySelector("#blue");
+      const reset = document.querySelector("#reset");
+
+      click.onclick = function () {
+        store.dispatch(changeTextAction(input.value));
+      };
+
+      round.onclick = function () {
+        store.dispatch(changeShapeAction("rounded"));
+      };
+
+      circle.onclick = function () {
+        store.dispatch(changeShapeAction("circle"));
+      };
+
+      rect.onclick = function () {
+        store.dispatch(changeShapeAction("rect"));
+      };
+
+      red.onclick = function () {
+        store.dispatch(changeColorAction("red"));
+      };
+
+      green.onclick = function () {
+        store.dispatch(changeColorAction("green"));
+      };
+
+      blue.onclick = function () {
+        store.dispatch(changeColorAction("blue"));
+      };
+
+      reset.onclick = function () {
+        store.dispatch({ type: "RESET" });
+      };
+
+      render();
+    </script>
+  </body>
+</html>

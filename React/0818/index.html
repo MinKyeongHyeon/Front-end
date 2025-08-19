@@ -100,9 +100,9 @@
        * @returns {Object} Redux 액션 객체
        */
       const changeColorAction = (color) => ({
-        type: "CHANGE_COLOR",
-        color: color,
-        timestamp: Date.now(), // 추가 메타데이터
+        type: "CHANGE_COLOR", // reducer에서 처리하는 타입으로 맞추기
+        color, // 변경할 색상 전달
+        timestamp: Date.now(),
       });
 
       /**
