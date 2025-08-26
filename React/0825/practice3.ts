@@ -41,10 +41,10 @@ interface isStudent{
   status:string;
 }
 
-function getInfo(name: string, age: number, isStudent?: boolean): { name: string; age: number; status: string } {
+function getInfo(user:Student):isStudent{
   return {
-    name,
-    age,
-    status: isStudent ? "학생" : "일반"
-  };
+    name:user.name,
+    age:user.age,
+    status:user.isStudent ?"학생":"일반인",
+  }
 }
