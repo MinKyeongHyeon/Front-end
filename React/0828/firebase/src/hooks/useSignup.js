@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { appAuth } from "../../firebase/config";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { useAuthContext } from "../context/AuthContext";
+import { useAuthContext } from "../hooks/useAuthContext";
 
 export const useSignup = () => {
   // 에러 정보를 저장합니다.
