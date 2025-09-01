@@ -9,6 +9,7 @@ export default function Home() {
   const { user } = useAuthContext();
   const { documents, error } = useCollection("diary");
 
+
   const year = new Date().getFullYear();
   const month = new Date().getMonth();
   const day = new Date().getDate();
@@ -25,6 +26,7 @@ export default function Home() {
         <h2 className="a11y-hidden">일기 목록</h2>
         <ul>
           <DiaryList documents={documents} />
+          {error&&<li><strong>{error}</strong></li>}
         </ul>
       </section>
     </div>

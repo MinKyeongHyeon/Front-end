@@ -25,8 +25,15 @@ export default function DiaryForm(uid) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addDocument({ title, text, uid });
-    console.log(title, text);
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, "0");
+    const day = String(now.getDate()).padStart(2, "0");
+    const week = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+    const dayOfWeek = week[now.getDay()];
+    const date = `${year}.${month}.${day}.${dayOfWeek}`;
+
+    addDocument({ title, text, uid, date });
   };
 
   return (
