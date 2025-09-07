@@ -1,0 +1,86 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background: repeating-linear-gradient(
+    135deg,
+    #fbeee0 0 20px,
+    #f7c873 20px 40px
+  );
+  font-family: "Press Start 2P", "Courier New", Courier, monospace;
+  color: #2d1e2f;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  image-rendering: pixelated;
+  filter: sepia(0.5) contrast(1.2) brightness(1.1);
+  border: 4px double #b44c2b;
+  background: #fffbe6;
+  box-shadow: 0 0 0 4px #f7c873, 0 0 0 8px #b44c2b;
+  border-radius: 8px;
+  transition: filter 300ms, box-shadow 300ms;
+}
+.logo:hover {
+  filter: sepia(0.8) contrast(1.5) brightness(1.2);
+  box-shadow: 0 0 0 8px #b44c2b, 0 0 0 12px #f7c873;
+}
+.logo.react:hover {
+  filter: sepia(0.8) contrast(1.5) brightness(1.2) hue-rotate(180deg);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+  background: #fffbe6;
+  border: 3px solid #b44c2b;
+  border-radius: 12px;
+  box-shadow: 4px 4px 0 #f7c873, 8px 8px 0 #b44c2b;
+  margin: 2em auto;
+  max-width: 400px;
+}
+
+.read-the-docs {
+  color: #b44c2b;
+  font-family: "Press Start 2P", "Courier New", Courier, monospace;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 0 #fffbe6, 2px 2px 0 #f7c873;
+}
+
+button,
+.button {
+  font-family: "Press Start 2P", "Courier New", Courier, monospace;
+  background: #b44c2b;
+  color: #fffbe6;
+  border: 2px solid #2d1e2f;
+  border-radius: 6px;
+  padding: 0.7em 2em;
+  font-size: 1em;
+  box-shadow: 2px 2px 0 #f7c873;
+  cursor: pointer;
+  margin: 1em 0;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+button:hover,
+.button:hover {
+  background: #f7c873;
+  color: #b44c2b;
+  box-shadow: 4px 4px 0 #b44c2b;
+}
