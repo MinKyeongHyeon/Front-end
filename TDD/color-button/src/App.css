@@ -19,10 +19,10 @@
   filter: sepia(0.5) contrast(1.2) brightness(1.1);
   border: 4px double #b44c2b;
   background: #fffbe6;
-    background: linear-gradient(135deg, #fbeee0cc 0 60%, #f7c873cc 100%);
+  background: linear-gradient(135deg, #fbeee0cc 0 60%, #f7c873cc 100%);
   filter: sepia(0.8) contrast(1.5) brightness(1.2);
   box-shadow: 0 0 0 8px #b44c2b, 0 0 0 12px #f7c873;
-    min-height: 100vh;
+  min-height: 100vh;
 }
 .logo.react:hover {
   filter: sepia(0.8) contrast(1.5) brightness(1.2) hue-rotate(180deg);
@@ -46,9 +46,10 @@
 .card {
   padding: 2em;
   background: rgba(255, 255, 255, 0.25);
-  border: 2px solid rgba(255,255,255,0.3);
+  border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 18px;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18), 4px 4px 0 #f7c873, 8px 8px 0 #b44c2b;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18), 4px 4px 0 #f7c873,
+    8px 8px 0 #b44c2b;
   margin: 2em auto;
   max-width: 400px;
   backdrop-filter: blur(8px) saturate(1.2);
@@ -57,32 +58,35 @@
 }
 .card:hover {
   box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25), 8px 8px 0 #b44c2b;
-  background: rgba(255,255,255,0.35);
+  background: rgba(255, 255, 255, 0.35);
 }
 
-button, .button {
+button,
+.button {
   font-family: "Press Start 2P", "Courier New", Courier, monospace;
-  background: rgba(255,255,255,0.18);
+  background: rgba(255, 255, 255, 0.18);
   color: #b44c2b;
-  border: 2px solid rgba(255,255,255,0.4);
+  border: 2px solid rgba(255, 255, 255, 0.4);
   border-radius: 10px;
   backdrop-filter: blur(4px) saturate(1.2);
   -webkit-backdrop-filter: blur(4px) saturate(1.2);
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
   padding: 0.7em 2em;
   font-size: 1em;
-  box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.10), 2px 2px 0 #f7c873;
+  box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.1), 2px 2px 0 #f7c873;
   cursor: pointer;
   margin: 1em 0;
 }
-button:hover, .button:hover {
-  background: rgba(255,255,255,0.32);
+button:hover,
+.button:hover {
+  background: rgba(255, 255, 255, 0.32);
   color: #b44c2b;
 
-.read-the-docs {
-  color: #b44c2b;
-  font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
-  font-size: 0.9em;
-  letter-spacing: 1px;
-  text-shadow: 1px 1px 0 #fffbe6, 2px 2px 0 #f7c873;
+  .read-the-docs {
+    color: #b44c2b;
+    font-family: "Press Start 2P", "Courier New", Courier, monospace;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 0 #fffbe6, 2px 2px 0 #f7c873;
+  }
 }
